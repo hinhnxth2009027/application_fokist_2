@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Style/vegetable.css">
+    <link rel="stylesheet" href="../Style/index.css">
+    <title>Basic Vegetable | Kisds zone</title>
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+<div class="footer col-s-12 col-12">
+    <img src="../Img/banner_vegetable.png" alt="">
+</div>
+<div class="media"></div>
+<div class="pt-container-vegetable">
+    <div class="pt-wr-vegetable">
+        <div class="pt-border-dashed-red">
+            <div class="pt-wrap-vegetable">
+
+
+                <% for(var i = 0 ; i < data.length ; i++){%>
+                    <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="<%= data[i].audio_vegetable%>">
+                        <div class="pt-wrap-lump">
+                            <div class="pt-img-wrap-vegetable">
+                                <img class="pt-img-vegetable"  src="<%= data[i].photo_vegetable%>">
+                            </div>
+                            <h1 class="pt-h1-vegetable"><%= data[i].vegetable_name%></h1>
+                        </div>
+                    </div>
+                <% } %>
+
+
+
+
+
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="2">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/carrot.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Carrot</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="3">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/cauliflower.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Cauliflower</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="4">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/Cherimoya.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Cherimoya</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="5">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/kohlrabi.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Kohlrabi</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="6">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/cucumber.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Cucumber</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="7">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/leek.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Leek</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="8">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/onion.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Onion</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="9">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/peas.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Peas</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="10">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/potato.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Potato</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="11">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/pumpkin.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Pumpkin</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="12">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/roasted-corn.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Roasted Corn</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="13">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/straw-mushrooms.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Mushrooms</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="14">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/apple.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Apple</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="15">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/avocado.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Avocado</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="16">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/cherry.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Cherry</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="17">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/Chili.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Chili</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="18">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/coconut.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Coconut</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="19">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/eggplant.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Eggplant</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="20">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/garlic.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Garlic</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="21">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/grape.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Grape</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="22">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/kiwi.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Kiwi</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="23">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/lemon.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Lemon</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="24">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/Mangoes.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Mangoes</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="25">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/mangosteen.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Mangosteen</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="26">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/papaya.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Papaya</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="27">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/passion-fruit.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Passion Fruit</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="28">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/peaches.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Peaches</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="29">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/pineapple.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Pineapple</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="30">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/Pomegranate.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Pomegranate</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="31">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/rambutan.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Rambutan</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="32">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/star-fruit.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Star Fruit</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="33">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/Strawberry.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Strawberry</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="34">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/tomato.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Tomato</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="35">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable">-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/watermelon.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Watermelon</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="pt-vegetable col-3 col-lg-4 col-md-6 col-s-12" id="36">-->
+<!--                    <div class="pt-wrap-lump">-->
+<!--                        <div class="pt-img-wrap-vegetable" >-->
+<!--                            <img class="pt-img-vegetable"  src="../img-vegetable/banana.jpg">-->
+<!--                        </div>-->
+<!--                        <h1 class="pt-h1-vegetable">Banana</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    </div>
+    <img src="../Img/img-footer.png" alt="">
+</div>
+<script src="../Script/vegettable.js"></script>
+<script src="../Script/index.js"></script>
+</body>
+</html>

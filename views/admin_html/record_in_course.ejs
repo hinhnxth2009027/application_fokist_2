@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Event</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="/plugins/Create_event.css">
+</head>
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="/admin" class="nav-link">Home</a>
+            </li>
+        </ul>
+
+    </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <%- include('include/side_bar.ejs') %>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content ">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-12 ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="col-lg-12">
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo1">Number</button>
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo2">letters</button>
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo3">animals</button>
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo4">vegetable</button>
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo5">corlor</button>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="card" id="demo1">
+                            <!-- /.card-header --><div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th style="text-align: center;width: 20px">STT</th>
+                                        <th style="text-align: center;width: 25%">Number</th>
+                                        <th style="text-align: center;width: 25%">Number text</th>
+                                        <th style="text-align: center;width: 25%">audio</th>
+                                        <th style="text-align: center;width: 25%">R U D</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for (var i = 0; i < data.length; i++){ %>
+                                    <tr>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=data[i].number%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #5f80fc"><%=data[i].number_text%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=data[i].audio_number%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=data[i]._id%>">
+                                                <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=data[i]._id%>" class="<%=data[i]._id%>">
+                                                <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=data[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
+                                                <button class="btn btn-outline-danger">Delete</button></a></td>
+                                    </tr>
+                                    <%} %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+
+
+
+
+
+                        <div class="card collapse" id="demo2">
+                            <!-- /.card-header --><div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th style="text-align: center;width: 20px">STT</th>
+                                        <th style="text-align: center;width: 25%">text letters</th>
+                                        <th style="text-align: center;width: 25%">photo</th>
+                                        <th style="text-align: center;width: 25%">audio letter</th>
+                                        <th style="text-align: center;width: 25%">R U D</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for (var i = 0; i < letters.length; i++){ %>
+                                    <tr>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=letters[i].text_letters%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><div style="display: flex;justify-content: center;align-items: center;overflow: hidden;width: 200px;height: 150px"><img src="<%=letters[i].photo_letter%>" width="100%"></div></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=letters[i].audio_letter%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=letters[i]._id%>">
+                                                <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=letters[i]._id%>" class="<%=letters[i]._id%>">
+                                                <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=letters[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
+                                                <button class="btn btn-outline-danger">Delete</button></a></td>
+                                    </tr>
+                                    <%} %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+<!--//animals-->
+
+
+
+
+
+
+
+
+
+                        <div class="card collapse" id="demo3">
+                            <!-- /.card-header --><div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th style="text-align: center;width: 20px">STT</th>
+                                        <th style="text-align: center;width: 25%">animal name</th>
+                                        <th style="text-align: center;width: 25%">photo</th>
+                                        <th style="text-align: center;width: 25%">audio animal</th>
+                                        <th style="text-align: center;width: 25%">R U D</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for (var i = 0; i < animals.length; i++){ %>
+                                    <tr>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=animals[i].animal_name%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><div style="display: flex;justify-content: center;align-items: center;overflow: hidden;width: 200px;height: 150px"><img src="<%=animals[i].animal_photo%>" width="100%"></div></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=animals[i].animal_audio%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=animals[i]._id%>">
+                                                <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=animals[i]._id%>" class="<%=animals[i]._id%>">
+                                                <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=animals[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
+                                                <button class="btn btn-outline-danger">Delete</button></a></td>
+                                    </tr>
+                                    <%} %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="card collapse" id="demo4">
+                            <!-- /.card-header --><div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th style="text-align: center;width: 20px">STT</th>
+                                        <th style="text-align: center;width: 25%">vegetable name</th>
+                                        <th style="text-align: center;width: 25%">photo</th>
+                                        <th style="text-align: center;width: 25%">audio vegetable</th>
+                                        <th style="text-align: center;width: 25%">R U D</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for (var i = 0; i < vegetable.length; i++){ %>
+                                    <tr>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=vegetable[i].vegetable_name%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><div style="display: flex;justify-content: center;align-items: center;overflow: hidden;width: 200px;height: 150px"><img src="<%=vegetable[i].photo_vegetable%>" width="100%"></div></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=vegetable[i].audio_vegetable%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=vegetable[i]._id%>">
+                                                <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=vegetable[i]._id%>" class="<%=vegetable[i]._id%>">
+                                                <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=vegetable[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
+                                                <button class="btn btn-outline-danger">Delete</button></a></td>
+                                    </tr>
+                                    <%} %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="card collapse" id="demo5">
+                            <!-- /.card-header --><div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th style="text-align: center;width: 20px">STT</th>
+                                        <th style="text-align: center;width: 25%">color name</th>
+                                        <th style="text-align: center;width: 25%">photo</th>
+                                        <th style="text-align: center;width: 25%">audio vegetable</th>
+                                        <th style="text-align: center;width: 25%">R U D</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for (var i = 0; i < color.length; i++){ %>
+                                    <tr>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=color[i].color_name%></h2></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><div style="width: 100px;height: 100px;background: <%=color[i].color_code%>;margin: auto;border: black 1px solid"></div></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=color[i].audio_color%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=color[i]._id%>">
+                                                <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=color[i]._id%>" class="<%=color[i]._id%>">
+                                                <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=color[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
+                                                <button class="btn btn-outline-danger">Delete</button></a></td>
+                                    </tr>
+                                    <%} %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>Version</b> 3.1.0-rc
+        </div>
+        <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+
+
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src=/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src=/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src=/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src=/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src=/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src=/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src=/plugins/jszip/jszip.min.js"></script>
+<script src=/plugins/pdfmake/pdfmake.min.js"></script>
+<script src=/plugins/pdfmake/vfs_fonts.js"></script>
+<script src=/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src=/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src=/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
+</body>
+</html>

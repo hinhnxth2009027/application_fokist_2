@@ -1,0 +1,357 @@
+.content div {
+    height: 300px;
+    transition: 0.6s;
+}
+
+.content div .col-3:hover {
+    box-shadow: black 1px 3px 6px;
+    background: rgba(0, 0, 0, 0.005);
+}
+
+.content > div > .col-3 {
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 870px) {
+    .content > div > .col-3 h1 {
+        font-size: 130px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+        font-family: 'Fredoka One', cursive;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .content > div > .col-3 h1 {
+        font-size: 100px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+        font-family: 'Fredoka One', cursive;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .content > div > .col-3 h1 {
+        font-size: 130px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+        font-family: 'Fredoka One', cursive;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+.rotating {
+    -webkit-animation: tranfom 5s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: translateY(0) translateX(0)
+    }
+    25% {
+        transform: translateY(-40px) translateX(-30px)
+    }
+    50% {
+        transform: translateY(0) translateX(0)
+    }
+    75% {
+        transform: translateY(-40px) translateX(30px)
+    }
+    100% {
+        transform: translateY(0) translateX(0)
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: translateY(0) translateX(0)
+    }
+    25% {
+        transform: translateY(-40px) translateX(-30px)
+    }
+    50% {
+        transform: translateY(0) translateX(0)
+    }
+    75% {
+        transform: translateY(-40px) translateX(30px)
+    }
+    100% {
+        transform: translateY(0) translateX(0)
+    }
+}
+
+.content > div > .col-3 i {
+    font-size: 0;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: 0.5s;
+}
+
+.content div .col-3:hover i {
+    display: block;
+    font-size: 35px;
+}
+
+.content > div > .col-3 h2 {
+    font-size: 40px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.content > div > .col-3 i:hover {
+    color: red;
+}
+
+.media audio {
+    height: 0;
+    display: inline;
+}
+
+.media {
+    height: 0;
+    width: 1px;
+    overflow: hidden;
+}
+
+.active {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hiden {
+    display: none;
+}
+
+.content div .col-4:hover {
+    box-shadow: black 1px 3px 6px;
+    background: rgba(0, 0, 0, 0.005);
+}
+
+.content > div > .col-4 {
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.content > div > .col-4 h1 {
+    font-size: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    font-family: 'Fredoka One', cursive;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.content > div > .col-4 i {
+    font-size: 0;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: 0.5s;
+}
+
+.content div .col-4:hover i {
+    display: block;
+    font-size: 35px;
+}
+
+.content > div > .col-4 h2 {
+    font-size: 40px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.content > div > .col-4 i:hover {
+    color: red;
+}
+
+i.fa-volume-up {
+    color: #ffacc7;
+}
+
+.selector > div.col-6 {
+    min-height: 400px;
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 1199px) {
+    .selector > div > div {
+        width: 100%;
+    }
+
+    .selector > div > .col-s-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn_action {
+        width: 100px;
+        height: 50px;
+        display: flex;
+        float: left;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 8px;
+
+    }
+
+    .btn_tutorial {
+        width: 100px;
+        margin-bottom: 10px;
+        float: left;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .content_1_10 {
+        height: 580px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .btn_next_1-10 {
+        margin-bottom: 120px;
+        border-bottom: #00a6ff 1px solid;
+    }
+}
+@media only screen and (max-width: 800px) {
+
+    .content_1_10 {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content_1_10 {
+        height: 800px;
+    }
+
+    .btn_action {
+        width: 80%;
+        margin: 50px auto;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .btn_tutorial {
+        border-radius: 8px;
+        width: 80%;
+        margin: 50px auto;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.selector > div > div .text_conten {
+    color: #666666;
+}
+
+.btn_action, .btn_tutorial {
+    background: #f36833;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.selector > div > div {
+    padding-right: 10px;
+    max-height: 400px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.btn_action:hover, .btn_tutorial:hover {
+    background: #f66d12;
+    opacity: 1;
+}
+
+.btn_action > h2, .btn_tutorial > h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.audio_count:hover {
+    background: #beffd8;
+
+}
+
+.audio_count {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.content_description {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.selector > div.col-6:hover {
+    border-radius: 18px;
+    background: linear-gradient(to bottom right, #c3f8a6, #f7fca1);
+    transform: translateY(-10px);
+}
+
+.btn_back:hover{
+    background: #00ffd9;
+}
+.btn_back {
+    border-radius: 8px;
+    width: 120px;
+    height: 40px;
+    border: red 2px solid;
+    background: none;
+    margin: 10px 10px;
+    transition: 0.4s;
+}
+
+
+.selector {
+    margin-top: 10px;
+}

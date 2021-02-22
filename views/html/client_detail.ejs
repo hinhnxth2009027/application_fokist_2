@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Style/index.css">
+    <link rel="stylesheet" href="../Style/packages.css">
+    <title>Kisds zone packages</title>
+    <style>
+        .container_img_index {
+            width: 80%;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img_index {
+            margin: 0 10px;
+            width: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            float: left;
+        }
+
+
+        .img_index img  {
+            width: 100%;
+        }
+
+        .contaimer_show_img {
+            width: 80%;
+            display: flex;
+            margin: 0 auto;
+            height: 300px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .contaimer_show_img div img {
+            height: 100% ;
+        }
+        .contaimer_show_img div {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .img_show:active{
+            opacity: 0.5;
+            border: red 3px solid;
+            cursor: pointer;
+        }
+        .detail_text {
+            padding: 15px;
+        }
+        .container_comment {
+            border: black 1px solid;
+        }
+        .container_comment input {
+            width: 70%;
+            padding-left: 20px;
+            height: 35px;
+        }
+        .container_comment button {
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="header col-12 row">
+    <div class="logo col-6 col-s-6">
+        <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                    class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+        <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+    </div>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+
+<div class="col-6 col-s-12" style="margin-top: 50px">
+    <div class="contaimer_show_img" style="overflow: hidden">
+        <div>
+            <img src="<%=data1.thumbnail%>" id="img_show">
+        </div>
+    </div>
+    <div class="container_img_index">
+        <% for (var i = 0 ; i< photo.length ;i++){%>
+        <div slot="<%=photo[i].replace('undefined','');%>" class="img_index img_show">
+            <img src="<%=photo[i].replace('undefined','');%>" >
+        </div>
+        <% }%>
+    </div>
+</div>
+<div class="col-6 col-s-12 detail_text">
+<h1 style="font-size: 40px" class="text_color_orange"><%=data1.title%></h1>
+    <h2>address : <span style="color: #858484"><%=data1.add_ress%></span></h2>
+    <h2>time: <span style="color: #858484"><%=data1.time%></span></h2>
+    <h2>for children aged : <span style="color: #858484"><%=data1.ages%></span></h2>
+    <h2>teacher : <span style="color: #858484"><%=data2.teacher_name%></span></h2>
+    <h2>gender : <span style="color: #858484"><%=data2.gender%></span></h2>
+    <div style="width: 200px;height: 200px;overflow: hidden;display: flex;justify-content: center;align-items: center;border: #00a6ff 2px solid;border-radius:15px ">
+        <img src="<%=data2.avatar%>" width="100%">
+    </div>
+    <h2>teacher exp : <span style="color: #858484">over <%=data2.exp%> years</span></h2>
+    <h2>subject : <span style="color: #858484"><%=data2.subject%></span></h2>
+    <h1>price : <span style="color: red">$ <%= data1.price%> / month</span></h1>
+</div>
+<div class="col-6 col-s-6 container_comment" style="padding: 10px">
+    <form action="/comment%>" method="post">
+        <input type="text" placeholder="comment...">
+        <% if (user!==undefined){%>
+            <input type="hidden" value="<%=user.user_name%>">
+        <% }%>
+        <button>send</button>
+    </form>
+</div>
+
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+        <div class="footer col-s-12 col-12">
+            <div>
+                <p>&copy;Copyright belongs to aptech 17-01-2021</p>i
+            </div>
+            <img src="../Img/img-footer.png">
+        </div>
+<script>
+        var index_img = document.getElementsByClassName('img_index')
+        var img_show = document.getElementById('img_show')
+        for (var a = 0 ; a < index_img.length ; a++){
+            index_img[a].onclick=function (){
+                img_show.src = this.slot
+            }
+        }
+</script>
+        <script src="../Script/index.js"></script>
+        <script src="/plugins/jquery/jquery.js"></script>
+        <script src="/plugins/jquery-validation/jquery.validate.js"></script>
+</body>
+</html>

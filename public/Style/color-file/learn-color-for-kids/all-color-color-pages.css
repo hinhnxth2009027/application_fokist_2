@@ -1,0 +1,86 @@
+
+
+.bgcolor:hover {
+    background: none;
+}
+.color1 {
+    color: red;
+}
+.color2 {
+    color: #4444ff;
+}
+.color3 {
+    color: #4bff00;
+}
+.color4 {
+    color: #d4ff00;
+}
+.color5 {
+    color: purple;
+}
+.color6 {
+    color: #ff5416;
+}
+.color7 {
+    color: black;
+}
+.color8 {
+    color: #ff31a1;
+}
+.color9 {
+    color: cyan;
+}
+.color10 {
+    color: grey;
+}
+.color11 {
+    color: violet;
+}
+.color12 {
+    color: brown;
+}
+
+
+
+
+
+
+
+
+.bgcolor1 {
+    background: red;
+}
+.bgcolor2 {
+    background: #4444ff;
+}
+.bgcolor3 {
+    background: #4bff00;
+}
+.bgcolor4 {
+    background: #d4ff00;
+}
+.bgcolor5 {
+    background: purple;
+}
+.bgcolor6 {
+    background: #ff5416;
+}
+.bgcolor7 {
+    background: black;
+}
+.bgcolor8 {
+    background: #ff31a1;
+}
+.bgcolor9 {
+    background: cyan;
+}
+.bgcolor10 {
+    background: grey;
+}
+.bgcolor11 {
+    background: violet;
+}
+.bgcolor12 {
+    background: brown;
+}
+

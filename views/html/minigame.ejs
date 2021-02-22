@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Games page | Kisds zone</title>
+    <link rel="stylesheet" href="../Style/game.css">
+    <link rel="stylesheet" href="../Style/index.css">
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+<div class="banner">
+    <img src="../Img/banner_gamepage.png">
+</div>
+<div class="media">
+</div>
+<div class="col-s-12 col-12 select_game">
+    <div class="col-s-4 col-4 select_game_index">
+            <div class="col-s-12 col-12">
+                <div style="margin-bottom: 10px">
+                    <img src="<%=course[14].thumbnail%>">
+                </div>
+            </div>
+        <h1><%=course[14].Title%></h1><br>
+        <%-course[14].description%>
+        <a href="/game01/game01.html">
+            <button>play    game 1</button>
+        </a>
+    </div>
+    <div class="col-s-4 col-4 select_game_index">
+        <div class="col-s-12 col-12">
+            <div>
+                <img src="<%=course[15].thumbnail%>">
+            </div>
+        </div>
+        <h1><%=course[15].Title%></h1><br>
+        <%-course[15].description%>
+        <a href="/game02/game02.html">
+            <button>play game 2</button>
+        </a>
+    </div>
+    <div class="col-s-4 col-4 select_game_index">
+        <div class="col-s-12 col-12">
+            <div>
+                <img src="<%=course[16].thumbnail%>">
+            </div>
+        </div>
+        <h1><%=course[16].Title%></h1><br>
+        <%-course[16].description%>
+        <a href="/game03/game03.html">
+            <button>play game 3</button>
+        </a>
+    </div>
+    <div class="col-s-4 col-4 select_game_index">
+        <div class="col-s-12 col-12">
+            <div>
+                <img src="<%=course[17].thumbnail%>">
+            </div>
+        </div>
+        <h1><%=course[17].Title%></h1><br>
+        <%-course[17].description%>
+        <a href="/game04/game04.html">
+            <button>play game 4</button>
+        </a>
+    </div>
+    <div class="col-s-4 col-4 select_game_index">
+        <div class="col-s-12 col-12">
+            <div>
+                <img src="<%=course[18].thumbnail%>">
+            </div>
+        </div>
+        <h1><%=course[18].Title%></h1><br>
+        <%-course[18].description%>
+        <a href="/game05/game05.html">
+            <button>play game 5</button>
+        </a>
+    </div>
+    <div class="col-s-4 col-4 select_game_index">
+        <div class="col-s-12 col-12">
+            <div>
+                <img src="<%=course[19].thumbnail%>">
+            </div>
+        </div>
+        <h1><%=course[19].Title%></h1><br>
+        <%-course[19].description%>
+        <a href="/game06/game06.html">
+            <button>play game 6</button>
+        </a>
+    </div>
+</div>
+
+
+
+
+<!--<div class="col-s-12 col-12 gameSelector">-->
+<!--    <div class=" btn_next_tap_game col-6 col-s-12 active_page">ABC Game</div>-->
+<!--    <div class=" btn_next_tap_game1 col-6 col-s-12">Math Game</div>-->
+<!--</div>-->
+<!--<div class="col-12 col-s-12 abc_game_page ">-->
+<!--    <div class="col-12 col-s-12 abc_game">-->
+<!--        <h1 class="title_game">ABC Fun Game</h1>-->
+<!--        <div class="col-12 col-s-12 ready_go">-->
+<!--            <button type="button" class=" btnaction" name="btnaction">Ready</button>-->
+<!--        </div>-->
+<!--        <div class="col-s-12 col-12 res_content1">-->
+<!--            <div class="res_content col-s-12 col-8"><img src="../Img/readABC.PNG" class="abc_show"></div>-->
+<!--        </div>-->
+<!--        <h1 class="msg">Hello my Friend</h1>-->
+<!--    </div>-->
+<!--    <div class="col-s-12 col-12 hello">-->
+<!--        <h1>Welcome to Fun Game</h1>-->
+<!--    </div>-->
+<!--    <div class="btn_paly_game col-12 col-s-12 hiden">-->
+<!--        <button type="button" class="button hiden" name="listening">listening</button>-->
+<!--        <button type="button" class="button hiden" name="btn_again">Again</button>-->
+<!--        <button type="button" class="button hiden" name="btn_submit">Submit</button>-->
+<!--        <br>-->
+<!--        <input type="text" name="key_values" class=" hiden">-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="col-s-12 col-12 qlpage hiden">-->
+<!--    <div class="col-12 col-s-12 math_game_page">-->
+<!--        <div class="col-12 col-s-12 abc_game">-->
+<!--            <h1 class="title_game">Math Fun Game</h1>-->
+<!--            <div class="col-12 col-s-12 ready_go">-->
+<!--                <button type="button" class=" btnaction btnaction2" name="math_btnaction">Ready</button>-->
+<!--            </div>-->
+<!--            <div class="col-s-12 col-12 res_content1">-->
+<!--                <div class="res_content res_content2 col-s-12 col-8"><img src="../Img/math.jpg" class="abc_show"></div>-->
+<!--            </div>-->
+<!--            <h1 class="msg2">Hello my Friend</h1>-->
+<!--        </div>-->
+<!--        <div class="col-s-12 col-12 hello2 hello">-->
+<!--            <h1>Welcome to Fun Game</h1>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-s-12 col-12 math_calc">-->
+<!--        <div class="Number_1 text_color_orange"></div>  <div class="bt text_color_green"></div>  <div class="Number_2 text_color_red"></div>  <div class="bang text_color_yellow"></div>  <div class="kq text_color_blue"></div>-->
+<!--    </div>-->
+<!--    <div class="btn_paly_game2 col-12 col-s-12">-->
+<!--        <div>-->
+<!--            <button class="btn1 hiden">Submit</button>-->
+<!--            <button class="btn2 hiden">next</button>-->
+<!--        </div>-->
+<!--        <br>-->
+<!--        <div ><input type="text" class="number_values hiden" name="number_values" placeholder="num"></div>-->
+<!--    </div>-->
+<!--</div>-->
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    </div>
+    <img src="../Img/img-footer.png" alt="">
+</div>
+<script src="../Script/index.js"></script>
+<script src="../Script/game.js"></script>
+</body>
+</html>

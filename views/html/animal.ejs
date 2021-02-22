@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animals page |  kids zone</title>
+    <link rel="stylesheet" href="../Style/animal.css">
+    <link rel="stylesheet" href="../Style/index.css">
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+<!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+
+</div>
+<hr class="bam">
+<div class="banner">
+    <img src="../Img/banner-animal.png">
+</div>
+<div class="media">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-s-12 col-12 all_selecter">
+    <div class="col-6 col-s-6 ">
+        <div class="thumbnail_animal col-s-12 col-12">
+            <div>
+                <img src="<%=course[6].thumbnail%>" width="100%">
+            </div>
+        </div>
+        <div class="title_animal">
+            <h1 style="color: #fc7979"><%=course[6].Title%></h1>
+            <%-course[6].description%>
+        </div>
+        <div class="btn_select_container">
+            <button class="btn_start_domestic_animals">start</button>
+            <button><a href="/parents">tutorial</a></button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-6 col-s-6 ">
+        <div class="thumbnail_animal col-s-12 col-12">
+            <div>
+                <img src="<%=course[7].thumbnail%>" width="100%">
+            </div>
+        </div>
+        <div class="title_animal">
+            <h1 style="color: #6f88ff"><%=course[7].Title%></h1>
+            <%-course[7].description%>
+        </div>
+        <div class="btn_select_container">
+            <button class="btn_start_wild_animals">start</button>
+            <button><a href="/parents">tutorial</a></button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="col-6 col-s-6 ">
+        <div class="thumbnail_animal col-s-12 col-12">
+            <div>
+                <img src="<%=course[8].thumbnail%>" width="100%">
+            </div>
+        </div>
+        <div class="title_animal">
+            <h1 style="color: #67ab43"><%=course[8].Title%></h1>
+            <%-course[8].description%>
+        </div>
+        <div class="btn_select_container">
+            <button class="btn_start_insect">start</button>
+            <button><a href="/parents">tutorial</a></button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="col-6 col-s-6 ">
+        <div class="thumbnail_animal col-s-12 col-12">
+            <div>
+                <img src="<%=course[9].thumbnail%>" width="100%">
+            </div>
+        </div>
+        <div class="title_animal">
+            <h1 style="color: #ab44fa"><%=course[9].Title%></h1>
+            <%-course[9].description%>
+        </div>
+        <div class="btn_select_container">
+            <button class="btn_start_marine_animals">start</button>
+            <button><a href="/parents">tutorial</a></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="content_domestic_animals hiden">
+    <div class="content col-s-12 col-12">
+        <% for (var i = 0 ; i < data.length ; i++){%>
+            <% if(data[i].animals==='domestic_animals') {%>
+            <div class="col-4 col-s-4 i" id="<%=data[i].animal_audio%>"><img src="<%= data[i].animal_photo%>">
+                <br>
+                <h1 style="color: #ff0000"><%=data[i].animal_name%></h1>
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </div>
+            <% } %>
+        <% }%>
+    </div>
+</div>
+
+
+
+
+
+
+<div class=" content_wild_animals col-s-12 col-12 hiden" >
+    <div class="content col-s-12 col-12" style="background: #e3f68c">
+        <% for (var i = 0 ; i < data.length ; i++){%>
+            <% if(data[i].animals==='wild_animals') {%>
+            <div class="col-4 col-s-4 i" id="<%=data[i].animal_audio%>"><img src="<%= data[i].animal_photo%>">
+                <br>
+                <h1 style="color: #ff0000"><%=data[i].animal_name%></h1>
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </div>
+            <% } %>
+        <% }%>
+    </div>
+</div>
+
+
+
+
+<div class=" content_insect col-s-12 col-12 hiden">
+    <div class="content col-s-12 col-12" style="background: #adc0f6">
+        <% for (var i = 0 ; i < data.length ; i++){%>
+            <% if(data[i].animals==='insect') {%>
+            <div class="col-4 col-s-4 i" id="<%=data[i].animal_audio%>"><img src="<%= data[i].animal_photo%>">
+                <br>
+                <h1 style="color: #ff0000"><%=data[i].animal_name%></h1>
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </div>
+            <% } %>
+        <% }%>
+    </div>
+</div>
+
+
+
+<div class=" content_marine_animals col-s-12 col-12 hiden">
+    <div class="content col-s-12 col-12" style="background: #fac4c4">
+        <% for (var i = 0 ; i < data.length ; i++){%>
+            <% if(data[i].animals==='marine_animals') {%>
+            <div class="col-4 col-s-4 i" id="<%=data[i].animal_audio%>"><img src="<%= data[i].animal_photo%>">
+                <br>
+                <h1 style="color: #ff0000"><%=data[i].animal_name%></h1>
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </div>
+            <% } %>
+        <% }%>
+    </div>
+</div>
+
+
+
+
+
+<div class="col-s-12 col-12 back_container hiden">
+    <button class="btn_back">back</button>
+</div>
+
+
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    </div>
+    <img src="../Img/img-footer.png" alt="">
+</div>
+<script src="../Script/index.js"></script>
+<script src="../Script/animal.js"></script>
+</body>
+</html>

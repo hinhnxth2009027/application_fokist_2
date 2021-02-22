@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Style/count123.css">
+    <link rel="stylesheet" href="../Style/one-hundred-color.css">
+    <link rel="stylesheet" href="../Style/index.css">
+    <title>Learn To Count | Kisds zone</title>
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label>
+            </h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+<div class="col-s-12 col-12 banner">
+    <img src="../Img/banner-count.png">
+</div>
+<div class="media">
+</div>
+<button class="hiden btn_back">back</button>
+<!--<div class="remote col-s-12 col-12">-->
+<!--        <div class="col-4 col-s-4 text_color_red btn_next_tap1 active">1 - 21</div>-->
+<!--        <div class="col-4 col-s-4 text_color_green  btn_next_tap2">21 - 60</div>-->
+<!--        <div class="col-4 col-s-4 text_color_blue btn_next_tap3">61 - 100</div>-->
+<!--</div>-->
+
+<div class="col-12 col-s-12 selector">
+
+
+
+
+    <div class="col-6 col-s-6">
+        <div class="col-8 col-s-8">
+            <div class="col-s-12 col-12">
+                <h1 class="tranfom3" style="margin-left: 90px;margin-top: 10px">
+                    <span style="font-size: 80px;color:#fa5316"><%-course[0].Sub_Title%></span>
+                </h1>
+            </div>
+            <h2 class="text_conten" style="color: #fa5316"><%-course[0].Title%></h2>
+            <h3 class="text_conten"><%-course[0].ages%></h3><br><br>
+            <%-course[0].description%>
+        </div>
+        <div class="col-4 col-s-4">
+            <a>
+                <div class="btn_action btn_action1">
+                    <h2>Start</h2>
+                </div>
+            </a>
+            <a href="/parents">
+                <div class="btn_tutorial">
+                    <h2>tutorial</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-6 col-s-6">
+        <div class="col-8 col-s-8">
+            <div class="col-s-12 col-12">
+                <h1 class="tranfom20" style="margin-left: 90px;margin-top: 10px">
+                    <span style="font-size: 80px;color:#558afc"><%-course[1].Sub_Title%></span>
+                </h1>
+            </div>
+            <h2 class="text_conten" style="color: #fdb45b"><%-course[1].Title%></h2>
+            <h3 class="text_conten"><%-course[1].ages%></h3><br>
+            <br><br>
+            <p style="font-size: 18px"><%-course[1].description%></p>
+        </div>
+        <div class="col-4 col-s-4">
+            <a>
+                <div class="btn_action btn_action2">
+                    <h2>Start</h2>
+                </div>
+            </a>
+
+            <a href="/parents">
+                <div class="btn_tutorial">
+                    <h2>tutorial</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-6 col-s-6">
+        <div class="col-8 col-s-8">
+            <div class="col-s-12 col-12">
+                <h1 class="tranfom6" style="margin-left: 90px;margin-top: 10px">
+                    <span style="font-size: 80px;color:#f864f5"><%-course[2].Sub_Title%></span>
+                </h1>
+            </div>
+            <h2 class="text_conten" style="color: #43b376"><%-course[2].Title%></h2>
+            <h3 class="text_conten"><%-course[2].ages%></h3><br><br><br>
+            <p style="font-size: 18px"><%-course[2].description%></p>
+        </div>
+        <div class="col-4 col-s-4">
+            <a>
+                <div class="btn_action btn_action3">
+                    <h2>Start</h2>
+                </div>
+            </a>
+
+            <a href="/parents">
+                <div class="btn_tutorial">
+                    <h2>tutorial</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-6 col-s-6">
+        <div class="col-8 col-s-8">
+            <div class="col-s-12 col-12">
+                <h1 class="tranfom39" style="margin-left: 90px;margin-top: 10px">
+                    <span style="font-size: 80px;color:#a886ff"><%-course[3].Sub_Title%></span>
+                </h1>
+            </div>
+            <h2 class="text_conten" style="color: #5454fc"><%-course[3].Title%></h2>
+            <h3 class="text_conten"><%-course[3].ages%></h3><br><br>
+            <p style="font-size: 18px"><%-course[3].description%></p>
+        </div>
+        <div class="col- col-s-4">
+            <a>
+                <div class="btn_action btn_action4">
+                    <h2>Start</h2>
+                </div>
+            </a>
+
+            <a href="/parents">
+                <div class="btn_tutorial">
+                    <h2>tutorial</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn_next_1-10 col-s-12 col-12 content_1_10 hiden" style="position: relative;border-bottom: 1px solid #6b6bff">
+    <div class=" col-s-12 col-12" style="height: 87%;box-sizing: border-box ;border-bottom: #6b6bff 1px solid;border-top: 1px solid #6b6bff">
+        <div class="number_show"
+             style="height: 100%;width: 50%;box-sizing: border-box;float: left;display: flex;justify-content: center;align-items: center">
+            <div style="text-align: center"><h1
+                        style="font-size: 120px;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #000000;font-weight: bold"
+                        class="class-1 audio_count1">1</h1> <br>
+                <h2 style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #000000; font-size: 80px"
+                    class="class-1">one</h2></div>
+        </div>
+        <div class="img_show" style="height: 100%;width: 50%;box-sizing: border-box;float: left;display: flex;justify-content: center;align-items: center">
+            <img src="<%=data[0].photo_number%>">
+        </div>
+    </div>
+    <div class="col-s-12 col-12 " style="height: 13%;position: absolute;bottom: 0">
+        <% for (var i = 0 ;i < data.length;i++){ %>
+        <% if (data[i].number_range==='1-10') {%>
+            <div class="audio_count" datatype="jhhiijoi" slot="<%=data[i].photo_number%>" style="width: 10%;float: left;height: 100%;display: flex;justify-content: center;align-items: center" id="<%=data[i].audio_number%>"><h1 class="show_number_text" id="<%=data[i].number_text%>" slot="<%=data[i].number%>" style="color: #7272fa"><%= data[i].number %></h1></div>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="content_11_30 col-s-12 col-12 hiden">
+    <div class="content col-s-12 col-12" >
+        <div class="one-to-twenty">
+            <% for (var i = 0 ;i < data.length; i++){ %>
+            <% if(data[i].number_range === '11-30') {%>
+                    <div class="col-4 img-audio" slot="<%=data[i].audio_number%>" id="<%=data[i].photo_number%>"><h1 class="class-<%= i %> tranfom<%= i %>"><%=data[i].number%></h1><i class="fa fa-volume-up" aria-hidden="true"> </i><br><h2 class="class-<%= i %> tranfom<%= i+1 %>"><%=data[i].number_text%></h2></div>
+                <% }%>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="content_31_60 col-s-12 col-12 hiden">
+    <div class="content col-s-12 col-12" >
+        <div class="one-to-twenty">
+            <% for (var i = 0 ;i < data.length; i++){ %>
+                <% if(data[i].number_range === '31-60') {%>
+                <div class="col-4 img-audio" slot="<%=data[i].audio_number%>" id="<%=data[i].photo_number%>"><h1 class="class-<%= i %> tranfom<%= i %>"><%=data[i].number%></h1><i class="fa fa-volume-up" aria-hidden="true"> </i><br><h2 class="class-<%= i %> tranfom<%= i+1 %>"><%=data[i].number_text%></h2></div>
+                <% }%>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="content_61_100 col-s-12 col-12 hiden">
+    <div class="content col-s-12 col-12" >
+        <div class="one-to-twenty">
+                <% for (var i = 0 ;i < data.length; i++){ %>
+                    <% if(data[i].number_range === '61-100') {%>
+                    <div class="col-4 img-audio" slot="<%=data[i].audio_number%>" id="<%=data[i].photo_number%>"><h1 class="class-<%= i %> tranfom<%= i %>"><%=data[i].number%></h1><i class="fa fa-volume-up" aria-hidden="true"> </i><br><h2 class="class-<%= i %> tranfom<%= i+1 %>"><%=data[i].number_text%></h2></div>
+                    <% }%>
+                <% } %>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--<div class="content col-s-12 col-12" >-->
+<!--    <div class="one-to-twenty">-->
+<!--        <% for (var i = 1 ;i < 100; i++){ %>-->
+<!--        <div class="col-4 img-audio" id="<%= i %>"><h1 class="class-<%= i %> tranfom<%= i %>"><%= i %></h1><i class="fa fa-volume-up" aria-hidden="true"> </i><br><h2 class="class-<%= i %> tranfom<%= i+1 %>"><%= i %></h2></div>-->
+<!--        <% } %>-->
+<!--    </div>-->
+<!--    <div class="twenty-to-sixty hiden" style="display: none"></div>-->
+<!--    <div class="sixty-to-100 hiden" style="display: none"></div>-->
+<!--</div>-->
+
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    </div>
+    <img src="../Img/img-footer.png" alt="">
+</div>
+<script>
+</script>
+<script src="../Script/count123.js"></script>
+<script src="../Script/index.js"></script>
+</body>
+</html>

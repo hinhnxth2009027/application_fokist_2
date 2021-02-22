@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Style/index.css">
+    <title>Kisds zone Contact</title>
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+<div class="contact_content row col-s-12 col-12">
+    <div class="col-6 information">
+        <div class="col-s-12 col-s-12">
+            <h1>introduction</h1>
+        </div>
+        <ul>
+            <li>- kids zone
+                <ul>
+                    <li class="content_contact_text">- is a combination of programs built on needs in response to
+                        helping young children recognize letters, buddhas, and animals around them, helping children to
+                        form creative thinking early. , smart development
+                    </li>
+                    <li class="content_contact_text">- With rich options and colorful splendor, Kids Zone will surely
+                        bring to your children a lot of fun and rewarding lessons.
+                    </li>
+                </ul>
+            </li>
+            <li>- technical team
+                <ul>
+                    <li class="content_contact_text">- Nguyễn Xuân Hjnh (leader) <a
+                                href="https://www.facebook.com/hinh.nguyenxuan.543/" target="_blank">Facebook</a></li>
+                    <li class="content_contact_text">- Phạm Đức Thắng (fron end)<a
+                                href="https://www.facebook.com/profile.php?id=100024326856616"
+                                target="_blank">Facebook</a></li>
+                    <li class="content_contact_text">- Trần Việt Cường (database)<a
+                                href="https://www.facebook.com/profile.php?id=100013172055070"
+                                target="_blank">Facebook</a></li>
+                    <li class="content_contact_text">- Nguyễn Hoàng Tuấn (back end)<a
+                                href="https://www.facebook.com/profile.php?id=100052233877353"
+                                target="_blank">Facebook</a></li>
+                    <li class="content_contact_text">- Lê Thành Đạt (design)<a
+                                href="https://www.facebook.com/ngocnam.le.543908" target="_blank">Facebook</a></li>
+                </ul>
+            </li>
+            <li>- Investors
+                <ul>
+                    <li class="content_contact_text">-FPT aptech</li>
+                    <li class="content_contact_text">-Vin-Group</li>
+                    <li class="content_contact_text">-VietNam AirLines</li>
+                    <li class="content_contact_text">-Đào hồng luyến</li>
+                </ul>
+            </li>
+            <li>- technology
+                <ul>
+                    <li class="content_contact_text">-HTML-5</li>
+                    <li class="content_contact_text">-CSS-3</li>
+                    <li class="content_contact_text">-JAVASCRIPT-ES 6</li>
+                </ul>
+            </li>
+            <li>- product chain
+                <ul>
+                    <li class="content_contact_text">-Play (address - 126 - Mi Dinh - Ha Noi "phone : 0987987789")</li>
+                    <li class="content_contact_text">-study (address - 216 - Mi Dinh - Ha Noi "phone : 0433433445")</li>
+                    <li class="content_contact_text">-cuisine (address - 371 - Mi Dinh - Ha Noi "phone : 0765765547")
+                    </li>
+                    <li class="content_contact_text">-travel (address - Ha Long - Quang Ninh "phone : 0318918918")</li>
+                </ul>
+            </li>
+        </ul>
+        <div><h2>Our address on google map</h2></div>
+        <div class="col-s-12 col-12 map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35432.73429164625!2d105.80363054249179!3d21.016378639735873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe545f5ec3bd7d325!2sKhu%20Vui%20Ch%C6%A1i%20KIDS%20ZONE!5e0!3m2!1svi!2s!4v1610835013959!5m2!1svi!2s"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+        </div>
+    </div>
+    <div class="col-6 contact">
+        <div class="col-12 col-s-12">
+            <form action="/contact_send" method="post">
+                <h2>Contact Us</h2><br>
+                <input type="text" class="contact_page_email"name="email"placeholder="Email"><br>
+                <div style="padding-left: 40px;padding-top: 5px">
+                    <span class="msg_email" style="float: left"></span>
+                </div><br>
+                <input type="text" class="contact_page_user"name="user_name_contact"placeholder="User Name"><br>
+                <div style="padding-left: 40px;padding-top: 5px">
+                    <span class="msg_user" style="float: left"></span>
+                </div>
+                <br>
+                <textarea  class="contact_page_comment"name="content_feedback"placeholder="comment"  ></textarea><br>
+                <div style="padding-left: 30px;padding-top: 5px">
+                    <span class="msg_comment" style="float: left"></span><br>
+                </div>
+                <button  name="btnsubmit_contactpage">send</button>
+                <button type="reset">reset</button>
+            </form>
+        </div>
+        <br>
+        <div class="col-s-12 col-12 contact_conecting">
+            <a href="http://facebook.com">
+                <button>Facebook</button>
+            </a>
+            <a href="http://instagram.com">
+                <button>Istagram</button>
+            </a>
+            <h3> Tl:0987987789</h3>
+        </div>
+        <div class="content_feedback col-s-12 col-12">
+            <div class="col-s-12 col-12" style="display: flex;justify-content: center;align-items: center;margin-bottom: 50px">
+                <h1>terms and use</h1>
+            </div>
+            <div class="col-12 col-s-12">
+                <h2>Welcome to visit the official kids zone website.</h2><br>
+                <span>
+                    We urge you to take the time to read and learn the terms of the legal agreement between you and FPT as below.
+                    By accessing, browsing the content, or using any content or images of this website, you (the user) acknowledge that you have read, understood and agree to comply with this website. the terms of these terms. If you do not agree with these terms, please do not use this website.
+                    FPT is responsible for ensuring the legality of providing content on the website to users. All information, images and all content posted on the website must comply with the provisions of law, and in accordance with Vietnamese fine customs.
+                </span><br><br>
+                <h2>COPYRIGHT AND TRADEMARKS</h2><br>
+                <span><br>
+                    Declaring the intellectual property rights of FPT to objects shown on the website
+                    This website and all contents of the website, including but not limited to the text, designs, graphics, interfaces, images, codes, and codes are copyrighted by FPT or the third party licensed to FPT. The copyright of FPT is shown on the website in English '© 2015 Copyright by FPT Corp. All rights reserved. '.
+                    Any content on this website including trademarks, trade names, company or product logo templates, product designs ... are owned by FPT and protected in accordance with the Law on Ownership. Vietnamese wisdom and related documents.
+                </span><br><br>
+                <h2>CONTENT</h2><br>
+                <span>
+                    Rights and responsibilities of FPT
+                    FPT reserves the right to change and / or terminate the contents and features of a part or the whole website without prior notice to users.
+                    FPT reserves the right to take security measures to protect and combat unauthorized access or unauthorized modification, disclosure or destruction of information.
+                    FPT reserves the right to take security measures to protect and combat unauthorized access or unauthorized modification, disclosure or destruction of information on the website.
+                    When using the website, information will be transmitted via a medium / device outside of FPT's control. Accordingly, FPT is not responsible for or related to any delay, failure, or interruption of any data or other information transmitted in connection with the use of the website.
+                    Personal information such as address, email, phone number of website users (provided voluntarily by users in various forms on the website) can be used internally for the purpose of upgrading products. products and services of FPT. FPT commits not to proactively disclose any information of the user to a third party, except in the case of a written request from investigating units in accordance with applicable laws. Then, FPT will notify users in writing. However, although there are security technologies and the system is also equipped with a lot of security features, no data transmitted over the internet can be 100% secure. Therefore, FPT cannot make a firm commitment that the information you provide to us will be absolutely confidential, and will not be responsible in the event of unauthorized access to personal information. user kernel. All non-private information and documents posted on the website by users are not considered confidential, FPT is free to use or transmit for any purpose.
+                    FPT is allowed to use any idea or concept that you have posted on the website for all unlimited purposes, including product development, production or marketing. FPT has no responsibility to compensate or reward providers.
+                    You must be aware of and ensure that the information and materials you submit are within your use rights; That means FPT will not infringe any rights of the third party.
+                    FPT reserves the right to refuse some documents you submit without having to respond to the reason.
+                    User rights and responsibilities
+                    FPT allows users to view, extract information on the website (print, download, forward ...) or share it with others but only for personal and non-commercial use, provided that the notice is quoted. Copyright as follows: '© 2015 Copyright by FPT Corp. ”
+                    You ensure to comply with the laws and regulations relating to the use of the FPT website; Do not interfere or affect the use of the website by other users; Do not interfere with the operation and management of the website of FPT.
+                    You acknowledge and accept that FPT and / or its affiliates / affiliates / employees are not responsible for any loss, damage, or expense arising from any decision. by using any information tr
+                </span><br>
+            </div>
+        </div>
+    </div>
+
+</div>
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    </div>
+    <img src="../Img/img-footer.png">
+</div>
+<script src="../Script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@media only screen and (min-width: 1000px) {
+    .profile_container>div>div>h2{
+        display: none;
+    }
+    .profile_container>div {
+        border: #00a6ff 3px solid;
+        border-radius: 15px;
+        height: 600px;
+    }
+    .profile_container {
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 999px) {
+    .profile_container>div>div>h1{
+        display: none;
+    }
+    .profile_container>div {
+        border: #00a6ff 3px solid;
+        border-radius: 0;
+        height: 600px;
+        width: 100%;
+    }
+    .profile_container {
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

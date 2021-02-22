@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Style/color.css">
+    <link rel="stylesheet" href="../Style/index.css">
+    <link rel="stylesheet" href="../Style/color-file/learn-color-for-kids/all-color-color-pages.css">
+    <title>Basic Color Page | Kisds zone</title>
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label>
+            </h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+<div class="banner">
+    <img src="../Img/banner-color.png">
+</div>
+<div class="media"></div>
+
+
+<div class="col-s-12 col-12 select_course ">
+    <div class="col-6 col-s-6">
+        <div class="thumbnail_select_color_course">
+            <div>
+                <img src="<%=course[12].thumbnail%>">
+            </div>
+        </div>
+        <div class="title">
+            <h1 style="color: #608bfa"><%=course[12].Title%></h1>
+            <br><br>
+            <h2 style="color: #608bfa"><%=course[12].ages%></h2>
+            <br><br>
+            <%-course[12].description%>
+        </div>
+        <div class="btn_container">
+            <button class="btn_show">start</button>
+            <button><a href="/parents">tutorial</a></button>
+        </div>
+    </div>
+
+
+    <div class="col-6 col-s-6">
+        <div class="thumbnail_select_color_course">
+            <div>
+                <img src="<%=course[13].thumbnail%>">
+            </div>
+        </div>
+        <div class="title">
+            <h1 style="color: #f86969"><%=course[13].Title%></h1>
+            <br><br>
+            <h2 style="color: #f86969"><%=course[13].ages%></h2>
+            <br><br>
+            <%-course[13].description%>
+        </div>
+        <div class="btn_container">
+            <button><a href="/color/draw">start</a></button>
+            <button><a href="/parents">tutorial</a></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="content content_color col-s-12 col-12 hiden">
+    <div>
+        <% for (var b = 0 ; b<data.length ; b++){%>
+            <div class="col-4 bgcolor i" style="background: <%= data[b].color_code%>;" id="<%= data[b].audio_color%>">
+                <h1 style="color: <%= data[b].color_code%>"><%= data[b].color_name%></h1>
+            </div>
+        <% }%>
+    </div>
+</div>
+
+<div class="col-s-12 col-12 container_back hiden">
+    <button class="back_color">back</button>
+</div>
+
+
+
+
+
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    </div>
+    <img src="../Img/img-footer.png" alt="">
+</div>
+
+
+<script src="../Script/color.js"></script>
+<script src="../Script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<aside class="main-sidebar sidebar-dark-warning elevation-4">
+    <!-- Brand Logo -->
+    <a href="/admin" class="brand-link">
+        <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light"><%=admin_key.admin_name%></span>
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            create new
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/create_form_event" class="nav-link">
+                                <i class="fas fa-calendar-alt"></i>
+                                <p>New event</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/create_form_event" class="nav-link">
+                                <i class="fas fa-user-lock"></i>
+                                <p>New Admin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/new_teacher" class="nav-link">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <p>New Teacher</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/new_study" class="nav-link">
+                                <i class="fas fa-university"></i>
+                                <p>New packages</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/add-a-new-course" class="nav-link">
+                                <i class="fas fa-pen-square"></i>
+                                <p>New course</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/all-course" class="nav-link">
+                                <i class="fas fa-file-medical-alt"></i>
+                                <p>New record in course</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                            Manage
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/show_event" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>List event</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/listUer" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>list user</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/listAdmin" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>list Admin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/get_list_course" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>list course in website</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/get_list_course_offline" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>list course offline</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/listAdmin" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>record for course in website</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

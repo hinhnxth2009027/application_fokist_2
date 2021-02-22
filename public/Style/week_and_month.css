@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box
+}
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+img {
+    vertical-align: middle;
+}
+.pt-mySlides {
+    display: none;
+}
+@media only screen and (max-width: 576px) {
+    .pt-prev, .pt-next {
+        padding: 7px;
+        font-size: 12px;
+        margin-top: -13px !important;
+    }
+    .pt-ctn-slide {
+        width: 75%;
+    }
+    .pt-slideshow-container {
+        border: 3px dashed rgba(230, 54, 125, 0.4);
+    }
+}
+@media only screen and (min-width: 576px) {
+    .pt-prev, .pt-next {
+        padding: 11px;
+        font-size: 17px;
+    }
+    .pt-ctn-slide {
+        width: 70%;
+    }
+    .pt-slideshow-container {
+        border: 4px dashed rgba(230, 54, 125, 0.4);
+    }
+}
+@media only screen and (min-width: 768px) {
+    .pt-prev, .pt-next {
+        padding: 13px;
+        font-size: 20px;
+    }
+    .pt-ctn-slide {
+        width: 65%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .pt-prev, .pt-next {
+        padding: 16px;
+        font-size: 23px;
+    }
+    .pt-ctn-slide {
+        width: 60%;
+    }
+    .pt-slideshow-container {
+        border: 5px dashed rgba(230, 54, 125, 0.4);
+    }
+}
+.pt-wrap-container {
+    background-color: rgb(129, 189, 11);
+}
+.pt-ctn-slide {
+    background-color: white;
+    margin: 0 auto;
+}
+.pt-ctn-slide:hover .pt-prev {
+    opacity: 1;
+    background-color: rgba(230, 54, 125, 0.4);
+}
+.pt-ctn-slide:hover .pt-next {
+    opacity: 1;
+    background-color: rgba(230, 54, 125, 0.4);
+}
+.pt-img-slide {
+    width: 100%;
+}
+.pt-slideshow-container {
+    transition: border 0.3s;
+    position: relative;
+    margin: 0 auto;
+}
+.pt-prev, .pt-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    color: white;
+    margin-top: -22px;
+    font-weight: bold;
+    transition: all 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    opacity: 0;
+    transform: scale(0.9);
+}
+.pt-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.pt-prev:hover {
+    transform: scale(1);
+}
+.pt-next:hover {
+    transform: scale(1);
+}
+.content_month > div {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.content_month > div > h1 {
+    font-size: 80px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+.content_month > div:hover > i {
+    font-size: 35px;
+    display: block;
+    color: #0088ff;
+}
+.content_month > div > i {
+    font-size: 0;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: 0.5s;
+}
+.content_month {
+    min-height: 500px;
+}
+.content_month > div:hover {
+    background: rgb(163, 222, 99);
+    border-radius: 15px;
+}
+.title_week {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #afffea;
+}
+.content_week > div:hover {
+    background: rgb(163, 222, 99);
+    border-radius: 15px;
+}
+.content_week > div {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.content_week > div > h1 {
+    font-size: 80px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+.content_week > div:hover > i {
+    font-size: 35px;
+    display: block;
+    color: #0088ff;
+}
+.content_week > div > i {
+    font-size: 0;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: 0.5s;
+}
+.content_week {
+    min-height: 500px;
+}
+@media only screen and (min-width: 774px) {
+    .content_week > div > h2 {
+        font-size: 70px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+    }
+    .content_month > div > h2 {
+        font-size: 70px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+    }
+    .title_week h1 {
+        font-size: 65px;
+    }
+}
+@media only screen and (max-width: 773px) {
+    .content_week > div > h2 {
+        font-size: 45px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+    }
+    .content_month > div > h2 {
+        font-size: 45px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+    }
+    .title_week h1 {
+        font-size: 45px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .title_week h1 {
+        font-size: 27px;
+    }
+}

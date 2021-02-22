@@ -1,0 +1,154 @@
+.select_caculate {
+    height: 660px;
+    margin-top: 10px;
+    transition: 0.4s;
+    border-radius: 18px;
+}
+
+.select_caculate:hover{
+    background: linear-gradient(to bottom right, #c9fab8, #f5f4a6);
+    transform: translateY(-10px);
+}
+
+.container_thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.container_thumbnail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    border: #00a6ff 2px solid;
+    border-radius:15px ;
+}
+
+.container_thumbnail > div > img {
+    width: 105%;
+}
+
+.container_title > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_title > div button a {
+    color: white;
+}
+
+.container_title > div h1 {
+    color: #f58787;
+}
+
+.container_title h3 {
+    color: #00a6ff;
+    text-align: center;
+}
+
+.container_title > div button:hover{
+    opacity: 1;
+}
+.container_title > div button {
+    width: 200px;
+    height: 50px;
+    background: #ff5c20;
+    opacity: 0.6;
+    margin: 30px 10px;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 25px;
+    color: white;
+}
+
+
+.result {
+    height: 50px;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    font-size: 25px;
+}
+
+.hiden {
+    display: none;
+}
+
+
+.result div {
+    width: 40px;
+    height: 40px;
+    background: red;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.tabs_item div h1 {
+    color: #f87a7a;
+}
+.selector_addition {
+    margin-bottom: 20px;
+}
+
+
+.selector_addition .btn_tab_item {
+    width: 190px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    margin: 10px 5px;
+    background: #fd6f3a;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.subtraction_addition {
+    margin-bottom: 20px;
+}
+
+.subtraction_addition .btn_tab_item1 {
+    width: 190px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    margin: 10px 5px;
+    background: #fd6f3a;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.none_active {
+    opacity: 0.6;
+}
+
+.back_container button:hover{
+    background: #00ffac;
+    font-size: 16px;
+}
+
+.back_container button {
+    width: 120px;
+    height: 40px;
+    background: none;
+    border-radius: 8px;
+    border: #00a6ff 2px solid;
+    transition: 0.4s;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.back_container {
+    height: 50px;
+    margin-top: 10px;
+}

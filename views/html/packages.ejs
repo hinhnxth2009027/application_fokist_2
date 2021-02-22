@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Style/index.css">
+    <link rel="stylesheet" href="../Style/packages.css">
+    <title>Packages Page | Kisds zone</title>
+</head>
+<body>
+<div class="header col-12 row">
+    <a href="/">
+        <div class="logo col-6 col-s-6">
+            <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+        </div>
+    </a>
+    <!--    menutop    -->
+    <%- include('include/menu.ejs') %>
+</div>
+<hr class="bam">
+<div class="modal">
+    <span class="close">&times;</span>
+    <div class="form_login">
+        <div class="page" id="login_title"><h2 class="text_color_orange login_title ">Login</h2></div>
+        <div class="page" id="register_title"><h2 class="register_title">Register</h2></div>
+        <div class="bottom_title">
+            <hr>
+        </div>
+
+        <div class="col-s-12 col-12">
+            <div id="user_login">
+                <form action="/login" method="post" id="loginform">
+                    <input type="text" name="user_email" placeholder="Email or Phone Number">
+                    <input type="password" name="password" placeholder="password">
+                    <button>Login</button>
+                </form>
+            </div>
+            <div id="user_register">
+                <form action="/create-user" method="post" id="registerform">
+                    <input type="text" name="user_email" placeholder="Email or Phone Number">
+                    <input type="text" name="user_name" placeholder="User Name">
+                    <input type="password" id="password" name="password" placeholder="password">
+                    <input type="password" name="comfirm_Password" placeholder="confirm password"><br>
+                    <label style="color:black" for="gender">gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male" selected>male</option>
+                        <option value="female">female</option>
+                    </select>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-12 col-s-12">
+    <div class="col-4 col-s-4 event " style="border-right:1px solid #8f8f8f;border-bottom: black 1px solid;padding: 0 10px ">
+        <div style="width: 100%;text-align: center;min-height: 70px;padding-top: 10px">
+            <h3 class="text_color_blue" style="font-size: 35px">Event</h3>
+            <i style="font-size: 30px" class="fa fa-sort-desc" aria-hidden="true"></i>
+            <i style="font-size: 30px" class="fa fa-caret-up" aria-hidden="true"></i>
+        </div>
+        <% var i = data.length - 1 %>
+        <div style="width: 100%;text-align: center;min-height: 70px;padding-top: 10px">
+            <h1 style="font-size: 50px" class="text_color_orange"><%= data[i].Title %></h1>
+        </div>
+        <div style="width: 100%;text-align: center;min-height: 70px;padding-top: 10px">
+            <h2 class="text_color_green" style="font-size: 30px">End Time : <%= data[i].time_event.getDay() %>
+                - <%= data[i].time_event.getMonth() %> - <%= data[i].time_event.getFullYear() %></h2>
+        </div>
+        <div style="width: 100%;text-align: center;padding-top: 10px;margin-top: 30px">
+            <img src="<%= data[i].thumbnail %>" style="width: 70%;border: #00a6ff 3px solid;border-radius: 20px">
+        </div>
+        <div style="width: 100%;text-align: center;height: 70px;padding-top: 10px">
+            <p style="font-size: 18px">
+                <%- data[i].content_event %>
+            </p>
+        </div>
+    </div>
+    <div class="col-8 col-s-8 all_packages" style="min-height: 1000px">
+        <div class="title_courses" style="width: 100%;margin: 0 auto;text-align: center;display: flex;justify-content: center;align-items: center;height: 50px">
+            <h1 class="text_color_green">courses</h1>
+            <form action="/packages" method="get">
+                <input type="text" name="keysearch" placeholder="search">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <hr style="width: 80%;margin: 10px auto 0 auto;background: #ff0000;height: 2px;border: none">
+        <div class="col-s-12 col-12 menu_packages_page">
+            <% if (user === undefined){ %>
+                <button class="open">Login</button>
+            <% } %>
+            <button class="goto_profile">Profile</button>
+        </div>
+        <hr style="width: 60%;margin: 10px auto 10px auto;background: #fa0025;height: 2px;border: none">
+        <div class="page_remote" style="width: 100%;height: 80px">
+            <% if (page-1>=1){%>
+            <a href="/packages?page=<%=page-1%>"><button><i class="fa fa-caret-left" aria-hidden="true"></i> <%=page.length%></button></a>
+            <% }else {%>
+                <a ><button> start</button></a>
+            <% }%>
+            <button><%=page%></button>
+            <% if (index>page){%>
+            <a href="/packages?page=<%=page+1%>"><button><i class="fa fa-caret-right" aria-hidden="true"></i> <%=page.length%></button></a>
+            <% }else {%>
+                <a ><button>End</button></a>
+            <% }%>
+        </div>
+
+        <div style="width: 100%" class="packages_1container">
+
+            <% for (var i = 0 ; i <data_courses.length ; i++){ %>
+            <div style="position: relative">
+
+                <div style="width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 15px">
+                    <div class="div">
+                        <img src="<%= data_courses[i].thumbnail %>" width="100%">
+                    </div>
+                </div>
+                <h2 style="text-overflow: ellipsis;width: 80%;overflow: hidden;white-space: nowrap;margin: 5px auto 0 auto;text-align: center;color: #ff8400"><%= data_courses[i].title %></h2>
+                <div style="text-align: center;margin-top: 5px">
+                    <h3 style="color: #868686;text-overflow: ellipsis;width: 100%;overflow: hidden;white-space: nowrap">
+                        time : <%= data_courses[i].time %></h3>
+                    <h4 style="color:#868686;text-overflow: ellipsis;width: 100%;overflow: hidden;white-space: nowrap ">
+                        Add ress : <%= data_courses[i].add_ress %></h4>
+                    <h3 style="color:#868686;text-overflow: ellipsis;width: 100%;overflow: hidden;white-space: nowrap ">
+                        age : <%= data_courses[i].ages %> years old and up</h3>
+                    <h3 style="color:#868686 "><span style="color: red">$ <%= data_courses[i].price %> / month</span>
+                    </h3>
+                </div>
+                <div style="width: 100%;clear: left;position: absolute;bottom: 10px;text-align: center"
+                     class="select_study">
+                    <a href="">
+                        <button>registration</button>
+                    </a>
+                    <a href="/detail/<%= data_courses[i]._id+':'+data_courses[i].teacher %>">
+                        <button>detail</button>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+<div class="footer col-s-12 col-12">
+    <div>
+        <p>&copy;Copyright belongs to aptech 17-01-2021</p>i
+    </div>
+    <img src="../Img/img-footer.png">
+</div>
+<script src="../Script/index.js"></script>
+<script src="../Script/packages.js"></script>
+<script src="/plugins/jquery/jquery.js"></script>
+<script src="/plugins/jquery-validation/jquery.validate.js"></script>
+</body>
+</html>

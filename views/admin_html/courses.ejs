@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('include/head.ejs') %>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="/admin" class="nav-link">Home</a>
+            </li>
+        </ul>
+
+    </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <%- include('include/side_bar.ejs') %>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <a href="#demo1" data-toggle="collapse" class="btn btn-outline-primary"
+           style="margin-left: 30px;margin-top: 10px">course learn number basic</a><br><br>
+        <div id="demo1" class="collapse">
+            <div class="col-lg-12">
+                <form action="/admin/add_record_learn_to_count" method="post" id="number_form">
+                    <div class="form-group col-lg-2">
+                        <label class="text-primary">add number</label>
+                        <input type="text" name="number" placeholder="plzz enter a number" class="form-control">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="text-primary">add number name</label>
+                        <input type="text" name="number_text" placeholder="plzz enter number name (one,two)"
+                               class="form-control">
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">photo</label>
+                        <div class="custom-file">
+                            <input type="file" id="number_photo_fake" name="number_photo_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" id="photo_number" name="photo_number" class="form-control">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="show_number_img">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">audio</label>
+                        <div class="custom-file">
+                            <input type="file" id="audio_fake" name="number_audio_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" name="audio_number" id="audio">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="audio_number_test">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2">
+                        <label class="text-primary">number range</label>
+                        <select name="number_range" class="form-control ui-selectmenu-optgroup">
+                            <option value="1-10" selected>1-10</option>
+                            <option value="11-30">11-30</option>
+                            <option value="31-60">31-60</option>
+                            <option value="61-100">61-100</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="margin-bottom: 30px" type="reset">reset</button>
+                    <button class="btn btn-primary" style="margin-bottom: 30px">add</button>
+                </form>
+            </div>
+        </div>
+        <a href="#demo2" data-toggle="collapse" class="btn btn-outline-primary" style="margin-left: 30px">course learn
+            abc xyz</a><br><br>
+        <div id="demo2" class="collapse">
+            <div class="col-lg-12 col-md-12">
+                <form action="/admin/add_record_letters_course" id="abcxyz" method="post">
+                    <div class="form-group col-lg-2">
+                        <label class="text-primary">letters</label>
+                        <input type="text" name="text_letters" placeholder="enter letters (a,c,n,j,s...apple,car...)"
+                               class="form-control">
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">photo</label>
+                        <div class="custom-file">
+                            <input type="file" id="letter_photo_fake" name="letter_photo_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" id="photo_letter" name="photo_letter" class="form-control">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="show_letters_img">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">audio</label>
+                        <div class="custom-file">
+                            <input type="file" id="letter_audio_fake" name="letter_audio_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" name="audio_letter" id="audio_letter">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="audio_letter_test">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-2 col-md-2">
+                        <label class="text-primary">letters range</label>
+                        <select name="letters_range" class="form-control ui-selectmenu-optgroup">
+                            <option value="alphabet" selected>alphabet</option>
+                            <option value="vocabulary">vocabulary</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="margin-bottom: 20px" type="reset">reset</button>
+                    <button class="btn btn-primary" style="margin-bottom: 20px">add record</button>
+                </form>
+            </div>
+        </div>
+        <a href="#demo3" data-toggle="collapse" class="btn btn-outline-primary" style="margin-left: 30px">course learn
+            animal</a><br><br>
+        <div id="demo3" class="collapse">
+            <div class="col-lg-12 col-md-12">
+                <form action="/admin/add_record_animal_course" id="animal_form" method="post">
+                    <div class="form-group col-lg-3 col-md-4">
+                        <label class="text-primary" for="add_text">add animal</label>
+                        <input id="add_text" type="text" class="form-control" name="animal_name"
+                               placeholder="please enter animal name">
+                    </div>
+                    <div class="form-group col-lg-4 col-md-8">
+                        <label class="text-primary">audio</label>
+                        <div class="custom-file">
+                            <input type="file" id="audio" name="animal_audio_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" name="animal_audio" id="animal_audio">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="audio_animal_test">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4 col-md-8">
+                        <label class="text-primary">photo</label>
+                        <div class="custom-file">
+                            <input type="file" id="animal_photo_fake" name="animal_photo_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" id="animal_photo" name="animal_photo" class="form-control">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="show_animal_img">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-8">
+                        <label class="text-primary">animals</label>
+                        <select name="animals" class="form-control">
+                            <option value="domestic_animals" class="">domestic animals (vật nuôi)</option>
+                            <option value="wild_animals" class="">wild animals (động vật hoang dã)</option>
+                            <option value="insect" class="">insect (côn trùng)</option>
+                            <option value="marine_animals" class="">marine animals (động vật biển)</option>
+                        </select>
+                    </div>
+                    <button style="margin-bottom: 20px" type="reset" class="btn btn-primary">reset</button>
+                    <button style="margin-bottom: 20px" class="btn btn-primary">add</button>
+                </form>
+            </div>
+        </div>
+        <a href="#demo4" data-toggle="collapse" class="btn btn-outline-primary" style="margin-left: 30px">course learn
+            vegetable</a><br><br>
+        <div id="demo4" class="collapse">
+            <div class="col-lg-12 col-md-12">
+                <form action="/admin/add_record_vegaetable_course" id="vegetable_form" method="post">
+                    <div class="form-group col-lg-3">
+                        <label class="text-primary">vegetable name</label>
+                        <input type="text" placeholder="enter vegetable name" name="vegetable_name"
+                               class="form-control">
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">photo</label>
+                        <div class="custom-file">
+                            <input type="file" id="vegetable_photo_fake" name="vegetable_photo_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" id="photo_vegetable" name="photo_vegetable" class="form-control">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="show_vegetable_img"></div>
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">audio</label>
+                        <div class="custom-file">
+                            <input type="file" id="vegetable_audio_fake" name="vegetable_audio_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" name="audio_vegetable" id="audio_vegetable">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="audio_vegetable_test"></div>
+                    </div>
+                    <button style="margin-bottom: 20px" type="reset" class="btn btn-primary">reset</button>
+                    <button style="margin-bottom: 20px" class="btn btn-primary">add</button>
+                </form>
+            </div>
+        </div>
+        <a href="#demo5" data-toggle="collapse" class="btn btn-outline-primary" style="margin-left: 30px">course learn
+            color basic</a><br><br>
+        <div id="demo5" class="collapse">
+            <div class="col-lg-12 col-md-12">
+                <form action="/admin/add_record_color_course" id="color_form" method="post">
+                    <div class="form-group col-lg-3">
+                        <label class="text-primary">color name</label>
+                        <input type="text" name="color_name" placeholder="enter color name" class="form-control">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label class="text-primary">color code</label>
+                        <input type="text" name="color_code" placeholder="enter color code" class="form-control">
+                    </div>
+                    <div class="show_color">
+                    </div>
+                    <div class="form-group col-lg-5 col-md-9">
+                        <label class="text-primary">audio</label>
+                        <div class="custom-file">
+                            <input type="file" id="color_audio_fake" name="color_audio_fake"
+                                   class="form-control custom-file-input">
+                            <input type="hidden" name="audio_color" id="audio_color">
+                            <label class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="audio_color_test">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="margin-bottom: 20px" type="reset">reset</button>
+                    <button class="btn btn-primary" style="margin-bottom: 20px">add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>Version</b> 3.1.0-rc
+        </div>
+        <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- jQuery -->
+<script>
+    const cloudName = 'kee';
+    const unsignedUploadPreset = 'qvdcslp4';
+
+
+
+    var number_photo = document.querySelector('input[name="photo_number"]')
+    var img_number = document.querySelector('input[name="number_photo_fake"]');
+    img_number.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    number_photo.value = dataJson.url
+                    var img_review = document.querySelector('.show_number_img')
+                    img_review.innerHTML = `<img src="${number_photo.value}" width="200px">`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var number_audio = document.querySelector('input[name="audio_number"]')
+    var audio_number = document.querySelector('input[name="number_audio_fake"]');
+    audio_number.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    number_audio.value = dataJson.url
+                    var audio_review = document.querySelector('.audio_number_test')
+                    audio_review.innerHTML = `<audio controls="" autoplay=""><source src="${number_audio.value}"></audio>`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var photo_letter = document.querySelector('input[name="photo_letter"]')
+    var letter_photo = document.querySelector('input[name="letter_photo_fake"]');
+    letter_photo.onchange = function () {
+
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    photo_letter.value = dataJson.url
+                    var img_review = document.querySelector('.show_letters_img')
+                    img_review.innerHTML = `<img src="${photo_letter.value}" width="200px">`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var letters_audio = document.querySelector('input[name="audio_letter"]')
+    var audio_letters = document.querySelector('input[name="letter_audio_fake"]');
+    audio_letters.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    letters_audio.value = dataJson.url
+                    var audio_review = document.querySelector('.audio_letter_test')
+                    audio_review.innerHTML = `<audio controls="" autoplay=""><source src="${letters_audio.value}"></audio>`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var photo_animal = document.querySelector('input[name="animal_photo"]')
+    var animal_photo = document.querySelector('input[name="animal_photo_fake"]');
+    animal_photo.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    photo_animal.value = dataJson.url
+                    var img_review = document.querySelector('.show_animal_img')
+                    img_review.innerHTML = `<img src="${photo_animal.value}" width="200px">`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var animal_audio = document.querySelector('input[name="animal_audio"]')
+    var audio_animal = document.querySelector('input[name="animal_audio_fake"]');
+    audio_animal.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    animal_audio.value = dataJson.url
+                    var audio_review = document.querySelector('.audio_animal_test')
+                    audio_review.innerHTML = `<audio controls="" autoplay=""><source src="${animal_audio.value}"></audio>`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var photo_vegetable = document.querySelector('input[name="photo_vegetable"]')
+    var vegetable_photo = document.querySelector('input[name="vegetable_photo_fake"]');
+    vegetable_photo.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    photo_vegetable.value = dataJson.url
+                    var img_review = document.querySelector('.show_vegetable_img')
+                    img_review.innerHTML = `<img src="${photo_vegetable.value}" width="200px">`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+    var vegetable_audio = document.querySelector('input[name="audio_vegetable"]')
+    var audio_vegetable = document.querySelector('input[name="vegetable_audio_fake"]');
+    audio_vegetable.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    vegetable_audio.value = dataJson.url
+                    var audio_review = document.querySelector('.audio_vegetable_test')
+                    audio_review.innerHTML = `<audio controls="" autoplay=""><source src="${vegetable_audio.value}"></audio>`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+
+    var color_code = document.querySelector('input[name=color_code]')
+    var show_color = document.querySelector('.show_color')
+    color_code.onkeyup = function () {
+        show_color.innerHTML = `<div style="width: 200px;height: 40px;background:${color_code.value};margin-left: 30px"></div>`
+    }
+
+
+
+    var color_audio = document.querySelector('input[name="audio_color"]')
+    var audio_color = document.querySelector('input[name="color_audio_fake"]');
+    audio_color.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    var dataJson = JSON.parse(this.responseText)
+                    color_audio.value = dataJson.url
+                    var audio_review = document.querySelector('.audio_color_test')
+                    audio_review.innerHTML = `<audio controls="" autoplay=""><source src="${color_audio.value}"></audio>`
+                }
+            }
+        }
+        xhr.open('POST', url, true);
+        var ud = new FormData();
+        ud.append('upload_preset', unsignedUploadPreset);
+        ud.append('tags', 'browser_upload')
+        ud.append('file', file)
+        xhr.send(ud)
+    }
+</script>
+<%- include('include/script.ejs') %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></Script>
+<script src="/Script/admin/course.js"></script>
+</body>
+</html>

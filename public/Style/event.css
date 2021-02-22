@@ -1,0 +1,210 @@
+.form {
+    max-width: 400px;
+    border: #00a6ff 3px solid;
+    text-align: center;
+    height: 500px;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+
+.form h2 {
+    width: 50%;float: left;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.bottom {
+    background: red;
+    height: 5px;
+    width: 50%;
+    transition: 0.5s;
+}
+
+.form form input {
+    width: 75%;
+    height: 35px;
+    background: none;
+    border: #00a6ff 2px solid;
+    margin: 10px auto;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+.form div form  {
+    width: 100%;
+}
+
+.form div button {
+    background: white;
+    width: 120px;
+    height: 35px; border: #00a6ff 2px solid;
+    border-radius: 8px;
+}
+
+.form div {
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+.form .form2 {
+    transition: 0.4s;
+}
+
+
+.form .form1 {
+    transition: 0.4s;
+}
+
+@media only screen and (min-width: 800px) {
+    .content_event img   {
+        border: #00a6ff 4px solid;
+        border-radius: 15px;
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 799px) {
+    .content_event img   {
+        border: #00a6ff 4px solid;
+        border-radius: 15px;
+        width: 90%;
+    }
+    .container_event {
+        padding: 0 10px;
+    }
+}
+
+
+.container_event div h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.container_event div h2 {
+    margin-bottom: 20px;
+}
+
+.form h2 {
+    cursor: pointer;
+}
+
+.hhr {
+    width: 40%;
+    background: red;
+    height: 5px;
+    transition: 0.4s;
+    margin: 30px 15px 0 10px ;
+}
+
+.btn_supmit {
+    width: 129px;
+    height: 35px;
+    color: black;
+    border: #00a6ff 3px solid;
+    border-radius: 8px;
+    background: none;
+}
+
+
+
+
+#user_email-error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#password-error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+
+.hiden {
+ display: inline;
+    height: 0;
+    overflow: hidden;
+}
+.show {
+    display: inline;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.form2 button {
+    margin-top: 5px;
+}
+
+.form2 .error {
+    display: block;
+    color: red;
+    font-size: 14px;
+}
+
+.sidebar_event div button {
+    width: 120px;
+    background: none;
+    height: 35px;
+    border: #00a6ff 2px solid;
+    border-radius: 8px;
+}
+
+.sidebar_event div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100px;
+}
+
+.sidebar_event {
+    border-bottom: #00a6ff 3px solid;
+    height: 100px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .div_avatar{
+        width: 100px;
+        float: left;
+        border-radius: 50%
+    }
+    .hidebutton{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .div_avatar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .none{
+        height: 310px;
+        display: inline;
+        overflow: hidden;
+    }
+    .none2{
+        display: none;
+    }
+    .menu_hide{
+        display: none;
+    }
+    .hidebutton{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        display: block;
+        text-align: center;
+    }
+}
+
