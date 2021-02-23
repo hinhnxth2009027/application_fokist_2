@@ -4,7 +4,7 @@ var bam = require('md5')
 var alert = require('alert')
 var new_course = require('../models/course')
 var teacher = require('../models/teacher_obj')
-
+var registraction = require('../models/registraction_obj')
 var study = require('../models/study_obj')
 
 
@@ -167,5 +167,13 @@ exports.list_recorse_course_in_web = async (req, res) => {
                 })
             })
         })
+    })
+}
+
+
+
+exports.list_registraction = async (req,res)=>{
+    registraction.find((err,data)=>{
+        res.render('admin_html/list_registraction.ejs', {data: data, admin_key: req.session.keyAdmin})
     })
 }

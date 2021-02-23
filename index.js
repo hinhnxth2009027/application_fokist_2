@@ -49,4 +49,6 @@ app.get('game/game1', function (req, resp){
 })
 
 //post application listen post
-app.listen(process.env.PORT||3690)
+app.listen(process.env.PORT||3690,function (){
+    console.log('http://localhost:3690')
+})

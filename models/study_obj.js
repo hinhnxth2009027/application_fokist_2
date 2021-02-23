@@ -25,6 +25,9 @@ const schema = mongoose.Schema({
         type: String,
         trim: true
     },
+    search:{
+      type:String
+    },
     ages:{
       type:Number,
       require:true,

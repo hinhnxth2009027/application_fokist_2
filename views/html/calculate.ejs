@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="../Style/index.css">
     <title>basic calculation</title>
 </head>
+
+
 <body>
 <div class="header col-12 row">
     <a href="/">
         <div class="logo col-6 col-s-6">
             <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
-                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+                        class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label>
+            </h1>
             <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
         </div>
     </a>
@@ -31,29 +34,31 @@
 </div>
 
 
-
-
-
-
-
-
 <div class="col-s-12 col-12 container_selecter ">
+
+
+
+
+
+
+
+
     <div class="col-6 col-s-6 select_caculate">
         <div class="col-s-12 col-12 container_thumbnail">
             <div>
-                <img src="<%=course[10].thumbnail%>">
+                <img src="<%= course[10].thumbnail %>">
             </div>
         </div>
         <div class="col-12 col-s-12 container_title">
             <div>
-                <h1><%=course[10].Title%></h1>
+                <h1><%= course[10].Title %></h1>
             </div>
             <br>
             <div>
-                <h2><%=course[10].ages%></h2>
+                <h2><%= course[10].ages %></h2>
             </div>
             <br>
-            <%-course[10].description%>
+            <%- course[10].description %>
             <div>
                 <button class="start_addition">start</button>
                 <button><a href="/parents">tutorial</a></button>
@@ -63,23 +68,24 @@
     <div class="col-6 col-s-6 select_caculate">
         <div class="col-s-12 col-12 container_thumbnail">
             <div>
-                <img src="<%=course[11].thumbnail%>">
+                <img src="<%= course[11].thumbnail %>">
             </div>
         </div>
         <div class="col-12 col-s-12 container_title">
             <div>
-                <h1><%=course[11].Title%></h1>
+                <h1><%= course[11].Title %></h1>
             </div>
             <br>
             <div>
-                <h2><%=course[11].ages%></h2>
+                <h2><%= course[11].ages %></h2>
             </div>
             <br>
-            <%-course[11].description%>
+            <%- course[11].description %>
             <div>
-            <div>
-                <button class="start_subtraction">start</button>
-                <button><a href="/parents">tutorial</a></button>
+                <div>
+                    <button class="start_subtraction">start</button>
+                    <button><a href="/parents">tutorial</a></button>
+                </div>
             </div>
         </div>
     </div>
@@ -90,506 +96,508 @@
 
 
 
+    <div class="col-s-12 col-12 conten_addition hiden">
+        <div class="col-s-12 col-12">
+            <div class="col-12 col-s-12 selector_addition">
+                <button class="btn_tab_item index">addition table 2</button>
+                <button class="btn_tab_item none_active">addition table 3</button>
+                <button class="btn_tab_item none_active">addition table 4</button>
+                <button class="btn_tab_item none_active">addition table 5</button>
+                <button class="btn_tab_item none_active">addition table 6</button>
+                <button class="btn_tab_item none_active">addition table 7 , 8 , 9</button>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item index">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 2</h1>
+                <br>
+                <% for (var i = 1 ; i <= 8;i++){ %>
+                    <% var a = i + 2 %>
+                    <h2>2 + <%= i %> = <%= i+2 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 2 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 3</h1>
+                <br>
+                <% for (var i = 1 ; i <= 7;i++){ %>
+                    <% var a = i + 3 %>
+                    <h2>3 + <%= i %> = <%= i+3 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 3 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 4</h1>
+                <br>
+                <% for (var i = 1 ; i <= 6;i++){ %>
+                    <% var a = i + 4 %>
+                    <h2>4 + <%= i %> = <%= i+4 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 4 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 5</h1>
+                <br>
+                <% for (var i = 1 ; i <= 5;i++){ %>
+                    <% var a = i + 5 %>
+                    <h2>5 + <%= i %> = <%= i+5 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 5 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 6</h1>
+                <br>
+                <% for (var i = 1 ; i <= 4;i++){ %>
+                    <% var a = i + 6 %>
+                    <h2>6 + <%= i %> = <%= i+6 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 6 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 7</h1>
+                <br>
+                <% for (var i = 1 ; i <= 3;i++){ %>
+                    <% var a = i + 7 %>
+                    <h2>7 + <%= i %> = <%= i+7 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 7 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+            <br><br>
+            <div style="margin-left: 30px">
+                <h1>Addition table of 8</h1>
+                <br>
+                <% for (var i = 1 ; i <= 2;i++){ %>
+                    <% var a = i + 8 %>
+                    <h2>8 + <%= i %> = <%= i+8 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 8 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+            <br><br>
+            <div style="margin-left: 30px">
+                <h1>Addition table of 9</h1>
+                <br>
+                <% for (var i = 1 ; i <= 1;i++){ %>
+                    <% var a = i + 9 %>
+                    <h2>9 + <%= i %> = <%= i+9 %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;+&nbsp;&nbsp;
+                        <% for (var c = 9 ; c < a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= a ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="col-s-12 col-12 conten_subtraction hiden">
+        <div class="col-s-12 col-12">
+            <div class="col-12 col-s-12 subtraction_addition">
+                <button class="btn_tab_item1 index">subtraction table 2 , 3 , 4</button>
+                <button class="btn_tab_item1 none_active">subtraction table 5</button>
+                <button class="btn_tab_item1 none_active">subtraction table 6</button>
+                <button class="btn_tab_item1 none_active">subtraction table 7</button>
+                <button class="btn_tab_item1 none_active">subtraction table 8</button>
+                <button class="btn_tab_item1 none_active">subtraction table 9</button>
+                <button class="btn_tab_item1 none_active">subtraction table 10</button>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 index">
+
+            <div style="margin-left: 30px">
+                <h1>subtraction table of 2</h1>
+                <br>
+                <% for (var i = 1 ; i < 2;i++){ %>
+                    <% var a = i %>
+                    <h2>2 - <%= i %> = <%= 2-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 2 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+            <br><br>
+            <div style="margin-left: 30px">
+                <h1>subtraction table of 3</h1>
+                <br>
+                <% for (var i = 1 ; i < 3;i++){ %>
+                    <% var a = i %>
+                    <h2>3 - <%= i %> = <%= 3-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 3 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+            <br><br>
+            <div style="margin-left: 30px">
+                <h1>subtraction table of 4</h1>
+                <br>
+                <% for (var i = 1 ; i < 4;i++){ %>
+                    <% var a = i %>
+                    <h2>4 - <%= i %> = <%= 4-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 4 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 5</h1>
+                <br>
+                <% for (var i = 1 ; i < 5;i++){ %>
+                    <% var a = i %>
+                    <h2>5 - <%= i %> = <%= 5-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 5 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 6</h1>
+                <br>
+                <% for (var i = 1 ; i < 6;i++){ %>
+                    <% var a = i %>
+                    <h2>6 - <%= i %> = <%= 6-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 6 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 7</h1>
+                <br>
+                <% for (var i = 1 ; i < 7;i++){ %>
+                    <% var a = i %>
+                    <h2>7 - <%= i %> = <%= 7-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 7 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 8</h1>
+                <br>
+                <% for (var i = 1 ; i < 8;i++){ %>
+                    <% var a = i %>
+                    <h2>8 - <%= i %> = <%= 8-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 8 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 9</h1>
+                <br>
+                <% for (var i = 1 ; i < 9;i++){ %>
+                    <% var a = i %>
+                    <h2>9 - <%= i %> = <%= 9-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 9 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-s-12 col-12 tabs_item1 hiden">
+            <div style="margin-left: 30px">
+                <h1>Addition table of 10</h1>
+                <br>
+                <% for (var i = 1 ; i < 10;i++){ %>
+                    <% var a = i %>
+                    <h2>10 - <%= i %> = <%= 10-i %></h2>
+                    <div class="result">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;
+                        <% for (var c = 1 ; c <= a ; c++){ %>
+                            <div style="float: left"></div>
+                        <% } %>
+                        &nbsp;&nbsp;=&nbsp;&nbsp;
+                        <% for (var r = 1 ; r <= 10 - i ;r++){ %>
+                            <div></div>
+                        <% } %>
+                    </div><br><br>
+                    <br>
+                <% } %>
+            </div>
+        </div>
+    </div>
 
 
 
 
 
 
-<div class="col-s-12 col-12 conten_addition ">
-    <div class="col-s-12 col-12">
-        <div class="col-12 col-s-12 selector_addition">
-            <button class="btn_tab_item index">addition table 2</button>
-            <button class="btn_tab_item none_active">addition table 3</button>
-            <button class="btn_tab_item none_active">addition table 4</button>
-            <button class="btn_tab_item none_active">addition table 5</button>
-            <button class="btn_tab_item none_active">addition table 6</button>
-            <button class="btn_tab_item none_active">addition table 7 , 8 , 9</button>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item index">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 2</h1>
-            <br>
-            <% for (var i = 1 ; i<=8;i++){%>
-                <% var a = i+2%>
-                <h2>2 + <%=i%> = <%=i+2%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 2 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 3</h1>
-            <br>
-            <% for (var i = 1 ; i<=7;i++){%>
-                <% var a = i+3%>
-                <h2>3 + <%=i%> = <%=i+3%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 3 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 4</h1>
-            <br>
-            <% for (var i = 1 ; i<=6;i++){%>
-                <% var a = i+4%>
-                <h2>4 + <%=i%> = <%=i+4%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 4 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 5</h1>
-            <br>
-            <% for (var i = 1 ; i<=5;i++){%>
-                <% var a = i+5%>
-                <h2>5 + <%=i%> = <%=i+5%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 5 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 6</h1>
-            <br>
-            <% for (var i = 1 ; i<=4;i++){%>
-                <% var a = i+6%>
-                <h2>6 + <%=i%> = <%=i+6%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 6 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 7</h1>
-            <br>
-            <% for (var i = 1 ; i<=3;i++){%>
-                <% var a = i+7%>
-                <h2>7 + <%=i%> = <%=i+7%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 7 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-        <br><br>
-        <div style="margin-left: 30px">
-            <h1>Addition table of 8</h1>
-            <br>
-            <% for (var i = 1 ; i<=2;i++){%>
-                <% var a = i+8%>
-                <h2>8 + <%=i%> = <%=i+8%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 8 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-        <br><br>
-        <div style="margin-left: 30px">
-            <h1>Addition table of 9</h1>
-            <br>
-            <% for (var i = 1 ; i<=1;i++){%>
-                <% var a = i+9%>
-                <h2>9 + <%=i%> = <%=i+9%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;+&nbsp;&nbsp;
-                    <% for (var c = 9 ; c < a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= a ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-</div>
-<div class="col-s-12 col-12 conten_subtraction hiden">
-    <div class="col-s-12 col-12">
-        <div class="col-12 col-s-12 subtraction_addition">
-            <button class="btn_tab_item1 index">subtraction table 2 , 3 , 4</button>
-            <button class="btn_tab_item1 none_active">subtraction table 5</button>
-            <button class="btn_tab_item1 none_active">subtraction table 6</button>
-            <button class="btn_tab_item1 none_active">subtraction table 7</button>
-            <button class="btn_tab_item1 none_active">subtraction table 8</button>
-            <button class="btn_tab_item1 none_active">subtraction table 9</button>
-            <button class="btn_tab_item1 none_active">subtraction table 10</button>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 index">
-
-        <div style="margin-left: 30px">
-            <h1>subtraction table of 2</h1>
-            <br>
-            <% for (var i = 1 ; i<2;i++){%>
-                <% var a = i%>
-                <h2>2 - <%=i%> = <%=2-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 2-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-        <br><br>
-        <div style="margin-left: 30px">
-            <h1>subtraction table of 3</h1>
-            <br>
-            <% for (var i = 1 ; i<3;i++){%>
-                <% var a = i%>
-                <h2>3 - <%=i%> = <%=3-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 3-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-        <br><br>
-        <div style="margin-left: 30px">
-            <h1>subtraction table of 4</h1>
-            <br>
-            <% for (var i = 1 ; i<4;i++){%>
-                <% var a = i%>
-                <h2>4 - <%=i%> = <%=4-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 4-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 5</h1>
-            <br>
-            <% for (var i = 1 ; i<5;i++){%>
-                <% var a = i%>
-                <h2>5 - <%=i%> = <%=5-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 5-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 6</h1>
-            <br>
-            <% for (var i = 1 ; i<6;i++){%>
-                <% var a = i%>
-                <h2>6 - <%=i%> = <%=6-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 6-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 7</h1>
-            <br>
-            <% for (var i = 1 ; i<7;i++){%>
-                <% var a = i%>
-                <h2>7 - <%=i%> = <%=7-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 7-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 8</h1>
-            <br>
-            <% for (var i = 1 ; i<8;i++){%>
-                <% var a = i%>
-                <h2>8 - <%=i%> = <%=8-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 8-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 9</h1>
-            <br>
-            <% for (var i = 1 ; i<9;i++){%>
-                <% var a = i%>
-                <h2>9 - <%=i%> = <%=9-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 9-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-    <div class="col-s-12 col-12 tabs_item1 hiden">
-        <div style="margin-left: 30px">
-            <h1>Addition table of 10</h1>
-            <br>
-            <% for (var i = 1 ; i<10;i++){%>
-                <% var a = i%>
-                <h2>10 - <%=i%> = <%=10-i%></h2>
-                <div class="result">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <% for (var c = 1 ; c <= a ; c++){%>
-                        <div style="float: left"></div>
-                    <% }%>
-                    &nbsp;&nbsp;=&nbsp;&nbsp;
-                    <% for (var r = 1 ; r <= 10-i ;r++){%>
-                        <div></div>
-                    <% }%>
-                </div><br><br>
-                <br>
-            <% }%>
-        </div>
-    </div>
-</div>
-
-<div class="col-s-12 col-12 back_container hiden">
-    <button class="back">back</button>
-</div>
 
 
-
-
-
-<a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
-<div class="footer col-s-12 col-12">
-    <div>
-        <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+    <div class="col-s-12 col-12 back_container hiden">
+        <button class="back">back</button>
     </div>
-    <img src="../Img/img-footer.png" alt="">
-</div>
-<script src="../Script/calculate.js"></script>
-<script src="../Script/index.js"></script>
+
+
+    <a href="/" class="back-to-home"><i class="fa fa-home" aria-hidden="true" style="z-index: 1000"></i></a>
+    <div class="footer col-s-12 col-12">
+        <div>
+            <p>&copy;Copyright belongs to aptech 17-01-2021</p>
+        </div>
+        <img src="../Img/img-footer.png" alt="">
+    </div>
+    <script src="../Script/calculate.js"></script>
+    <script src="../Script/index.js"></script>
+
 </body>
+
+
+
 </html>

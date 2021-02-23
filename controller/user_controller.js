@@ -12,12 +12,24 @@ var course_animals = require('../models/models_course/animals_obj')
 var course_vegetable = require('../models/models_course/vegetable_obj')
 var course_color = require('../models/models_course/color_obj')
 
+var registraction = require('../models/registraction_obj')
+
 var course = require('../models/course')
 
 
 exports.home = function (rep, res) {
     res.render('index.ejs')
 };
+
+exports.registraction = async (req,res)=>{
+    var obj = new registraction(req.body)
+    obj.registraction_date = Date()
+    obj.save((err,data)=>{
+        res.redirect('/packages')
+        alert('đăng kí thành công khóa học ' + obj.course_title + ' cho bé' + obj.child_name)
+    })
+}
+
 
 
 
@@ -149,32 +161,7 @@ exports.logout = async (req, res) => {
 }
 
 
-exports.listUer = async (req, res) => {
-    var gender = req.query.gender;
-    var username = req.query.userName;
-    let filter = {
-        status: 1
-    };
-    if (gender && gender.length > 0) {
-        filter['gender'] = gender
-    }
-    if (username && username.length > 0) {
-        filter['user_email'] = {$regex: '.*' + username + '.*'}
-    }
 
-
-    // res.send(filter);
-    await account.find(filter, function (err, data) {
-        if (err) {
-            throw (err)
-        }
-        res.render('admin_html/list_user.ejs', {
-            data: data,
-            admin_key: req.session.keyAdmin,
-            gender: req.query.gender
-        })
-    })
-}
 
 
 exports.editprofile = async (req, res) => {
@@ -206,9 +193,44 @@ exports.profile = async (req, res) => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 exports.packages_page = async (req, res) => {
     await event.find({status: 1}, (err, data) => {
-        study.find({status: 1}, (err, data_courses) => {
+
+        var search = req.query.search;
+
+        let filter = {
+            status: 1
+        };
+        if (search && search.length > 0) {
+            filter['search'] = {$regex: '.*' + search + '.*'}
+        }
+        study.find(filter, (err, data_courses) => {
             var index_page = data_courses.length / 9
             var index
             if (index_page <= parseInt(index_page)) {
@@ -221,6 +243,9 @@ exports.packages_page = async (req, res) => {
             var start = (page - 1) * perpage
             var end = page * perpage
             var data_courses1 = data_courses.reverse();
+
+
+
             res.render('html/packages.ejs', {
                 data: data,
                 user: req.session.user,
@@ -235,6 +260,82 @@ exports.packages_page = async (req, res) => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports.listUer = async (req, res) => {
+    var gender = req.query.gender;
+    var username = req.query.userName;
+    let filter = {
+        status: 1
+    };
+    if (gender && gender.length > 0) {
+        filter['gender'] = gender
+    }
+    if (username && username.length > 0) {
+        filter['user_email'] = {$regex: '.*' + username + '.*'}
+    }
+
+
+    // res.send(filter);
+    await account.find(filter, function (err, data) {
+        if (err) {
+            throw (err)
+        }
+        res.render('admin_html/list_user.ejs', {
+            data: data,
+            admin_key: req.session.keyAdmin,
+            gender: req.query.gender
+        })
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 exports.detail = async (req, res) => {
     study.findById(req.params.id1, (err, data1) => {
         teacher.findById(req.params.id2, (err, data2) => {
@@ -247,6 +348,12 @@ exports.detail = async (req, res) => {
         })
     })
 }
+
+
+
+
+
+
 
 
 exports.draw = (req, res) => {

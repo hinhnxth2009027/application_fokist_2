@@ -46,6 +46,7 @@ router.post ('/add-a-new-course',admin_controller.post_a_new_course)
 router.get('/get_list_course',admin_controller.list_course)
 router.get('/get_list_course_offline',admin_controller.list_course_offline)
 router.get('/get_list_record_course',admin_controller.list_recorse_course_in_web)
+router.get('/get_list_registraction',admin_controller.list_registraction)
 
 
 router.post('/new_admin',admin_controller.create_account)

@@ -124,5 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
         event_content.css('overflow', 'hidden')
     })
 
+    var key_search = $('input[name=search]')
+
+    $('.btn_shearch').click(function (){
+        // window.location.href = location.protocol+key_search.val;
+        location.href=`${window.location.href.split('?')[0]}?search=${key_search.val()}`
+    })
 })
 

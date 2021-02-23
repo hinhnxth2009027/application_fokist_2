@@ -40,17 +40,27 @@ exports.form_new_study = async (req, res) => {
 }
 
 
+
+
+
+
+
 exports.new_study = async (req, res) => {
     var obj = new study(req.body)
     obj.create_at = Date()
     await teacher.findById(obj.teacher, (err, data) => {
         obj.subject = data.subject
+        obj.search = obj.title + obj.time + obj.add_ress + obj.price
         obj.save((err, data) => {
             res.redirect('/admin/new_study')
             alert('tạo thành công khóa học ' + obj.title + ' với giáo viên ' + obj.teacher)
         })
     })
 }
+
+
+
+
 
 
 

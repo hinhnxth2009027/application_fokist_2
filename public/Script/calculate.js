@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     btn_show_content_addition.onclick = function (){
-        back_container.classList.remove('hiden')
+         back_container.classList.remove('hiden')
         content_addition.classList.remove('hiden')
         content_subtraction.classList.add('hiden')
         select_ter.classList.add('hiden')
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     btn_show_content_subtraction.onclick = function (){
-        back_container.classList.remove('hiden')
+         back_container.classList.remove('hiden')
         content_addition.classList.add('hiden')
         content_subtraction.classList.remove('hiden')
         select_ter.classList.add('hiden')
@@ -71,5 +71,4 @@ document.addEventListener('DOMContentLoaded',()=>{
         content_subtraction.classList.add('hiden')
         select_ter.classList.remove('hiden')
     }
-
 })

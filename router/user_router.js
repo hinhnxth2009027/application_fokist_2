@@ -34,5 +34,7 @@ router.get('/detail/:id1::id2',user_controller.detail)
 router.get('/color/draw',user_controller.draw)
 
 router.get('/packages',user_controller.packages_page)
+router.post('/registraction',user_controller.registraction)
+
 
 module.exports = router;

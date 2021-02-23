@@ -49,10 +49,10 @@
                     <input type="text" name="user_name" placeholder="User Name">
                     <input type="password" id="password" name="password" placeholder="password">
                     <input type="password" name="comfirm_Password" placeholder="confirm password"><br>
-                    <label style="color:black" for="gender">gender</label>
+                    <label style="color:black" for="gender">Gender</label>
                     <select id="gender" name="gender">
-                        <option value="male" selected>male</option>
-                        <option value="female">female</option>
+                        <option value="male" selected>Male</option>
+                        <option value="female">Female</option>
                     </select>
                     <button>Submit</button>
                 </form>
@@ -85,13 +85,32 @@
         </div>
     </div>
     <div class="col-8 col-s-8 all_packages" style="min-height: 1000px">
+
+
+
+
+
+
+
+
         <div class="title_courses" style="width: 100%;margin: 0 auto;text-align: center;display: flex;justify-content: center;align-items: center;height: 50px">
-            <h1 class="text_color_green">courses</h1>
-            <form action="/packages" method="get">
-                <input type="text" name="keysearch" placeholder="search">
-                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            <h1 class="text_color_green">Offline </h1>
+            <form>
+                <input type="text" name="search" placeholder="search">
+                <button class="btn_shearch"><i class="fa fa-search" aria-hidden="true"></i></button>
             </form>
         </div>
+
+
+
+
+
+
+
+
+
+
+
         <hr style="width: 80%;margin: 10px auto 0 auto;background: #ff0000;height: 2px;border: none">
         <div class="col-s-12 col-12 menu_packages_page">
             <% if (user === undefined){ %>
@@ -104,7 +123,7 @@
             <% if (page-1>=1){%>
             <a href="/packages?page=<%=page-1%>"><button><i class="fa fa-caret-left" aria-hidden="true"></i> <%=page.length%></button></a>
             <% }else {%>
-                <a ><button> start</button></a>
+                <a ><button> Start</button></a>
             <% }%>
             <button><%=page%></button>
             <% if (index>page){%>
@@ -127,21 +146,21 @@
                 <h2 style="text-overflow: ellipsis;width: 80%;overflow: hidden;white-space: nowrap;margin: 5px auto 0 auto;text-align: center;color: #ff8400"><%= data_courses[i].title %></h2>
                 <div style="text-align: center;margin-top: 5px">
                     <h3 style="color: #868686;text-overflow: ellipsis;width: 100%;overflow: hidden;white-space: nowrap">
-                        time : <%= data_courses[i].time %></h3>
+                        Time : <%= data_courses[i].time %></h3>
                     <h4 style="color:#868686;text-overflow: ellipsis;width: 100%;overflow: hidden;white-space: nowrap ">
                         Add ress : <%= data_courses[i].add_ress %></h4>
                     <h3 style="color:#868686;text-overflow: ellipsis;width: 100%;overflow: hidden;white-space: nowrap ">
-                        age : <%= data_courses[i].ages %> years old and up</h3>
+                        Age : <%= data_courses[i].ages %> years old and up</h3>
                     <h3 style="color:#868686 "><span style="color: red">$ <%= data_courses[i].price %> / month</span>
                     </h3>
                 </div>
                 <div style="width: 100%;clear: left;position: absolute;bottom: 10px;text-align: center"
                      class="select_study">
                     <a href="">
-                        <button>registration</button>
+                        <button>Registration</button>
                     </a>
                     <a href="/detail/<%= data_courses[i]._id+':'+data_courses[i].teacher %>">
-                        <button>detail</button>
+                        <button>Detail</button>
                     </a>
                 </div>
             </div>
