@@ -8,19 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>animals page |  kids zone</title>
+    <title>Animals page |  Kids zone</title>
     <link rel="stylesheet" href="../Style/animal.css">
     <link rel="stylesheet" href="../Style/index.css">
 </head>
 <body>
 <div class="header col-12 row">
-    <a href="/">
-        <div class="logo col-6 col-s-6">
+    <div class="logo col-6 col-s-6">
+        <a href="/">
             <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
                         class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
+        </a>
             <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
-        </div>
-    </a>
+    </div>
 <!--    menutop    -->
     <%- include('include/menu.ejs') %>
 
@@ -59,8 +59,8 @@
             <%-course[6].description%>
         </div>
         <div class="btn_select_container">
-            <button class="btn_start_domestic_animals">start</button>
-            <button><a href="/parents">tutorial</a></button>
+            <button class="btn_start_domestic_animals">Start</button>
+            <button><a href="/parents">Tutorial</a></button>
         </div>
     </div>
 
@@ -79,8 +79,8 @@
             <%-course[7].description%>
         </div>
         <div class="btn_select_container">
-            <button class="btn_start_wild_animals">start</button>
-            <button><a href="/parents">tutorial</a></button>
+            <button class="btn_start_wild_animals">Start</button>
+            <button><a href="/parents">Tutorial</a></button>
         </div>
     </div>
 
@@ -100,8 +100,8 @@
             <%-course[8].description%>
         </div>
         <div class="btn_select_container">
-            <button class="btn_start_insect">start</button>
-            <button><a href="/parents">tutorial</a></button>
+            <button class="btn_start_insect">Start</button>
+            <button><a href="/parents">Tutorial</a></button>
         </div>
     </div>
 
@@ -121,8 +121,8 @@
             <%-course[9].description%>
         </div>
         <div class="btn_select_container">
-            <button class="btn_start_marine_animals">start</button>
-            <button><a href="/parents">tutorial</a></button>
+            <button class="btn_start_marine_animals">Start</button>
+            <button><a href="/parents">Tutorial</a></button>
         </div>
     </div>
 </div>
@@ -150,7 +150,7 @@
             <% if(data[i].animals==='domestic_animals') {%>
             <div class="col-4 col-s-4 i" id="<%=data[i].animal_audio%>"><img src="<%= data[i].animal_photo%>">
                 <br>
-                <h1 style="color: #ff0000"><%=data[i].animal_name%></h1>
+                <h1 style="color: #720000"><%=data[i].animal_name%></h1>
                 <i class="fa fa-volume-up" aria-hidden="true"></i>
             </div>
             <% } %>
@@ -215,7 +215,7 @@
 
 
 <div class="col-s-12 col-12 back_container hiden">
-    <button class="btn_back">back</button>
+    <button class="btn_back">Back</button>
 </div>
 
 

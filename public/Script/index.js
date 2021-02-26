@@ -17,7 +17,7 @@ btn_submit_contact_page.onclick=function (){
         msg_email_contact_page.classList.add('err')
         msg_user_contact_page.innerHTML='Username is too short or already exists'
         msg_user_contact_page.classList.add('err')
-        msg_comment_contact_page.innerHTML='Please do not leave this field blank before submitting a review'
+        msg_comment_contact_page.innerHTML='Please do not leave this field submitting a review'
         msg_comment_contact_page.classList.add('err')
         return false;
     }else if (txt_email_contact_page.value.length>10&&txt_user_contact_page.value.length>1&&txt_comment_contact_page.value.length>=1){
@@ -61,7 +61,7 @@ txt_user_contact_page.onblur = function (){
 }
 txt_comment_contact_page.onblur = function (){
     if (txt_comment_contact_page.value.length<=1||txt_comment_contact_page.value.length>=10000){
-        msg_comment_contact_page.innerHTML='Please do not leave this field blank before submitting a review'
+        msg_comment_contact_page.innerHTML='Please do not leave this field submitting a review'
         msg_comment_contact_page.classList.add('err')
         msg_comment_contact_page.classList.remove('succes')
     }else if (txt_comment_contact_page.value.length>=2||txt_comment_contact_page.value.length<=9999){

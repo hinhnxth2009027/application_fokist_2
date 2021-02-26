@@ -15,7 +15,7 @@ var course_vegetable = require('../models/models_course/vegetable_obj')
 var course_color = require('../models/models_course/color_obj')
 
 exports.list = function (req, res) {
-    admin_event.find(function (err, data) {
+    admin_event.find({status:1},function (err, data) {
         if (err) {
             res.send('<h1>lỗi không sác định</h1>')
         }
@@ -64,6 +64,14 @@ exports.saves = function (req, res) {
 exports.create_event = function (req, res) {
     res.render('admin_html/form_event.ejs', {admin_key: req.session.keyAdmin})
 }
+
+
+
+
+
+
+
+
 exports.adminHome = async (req, res) => {
     await res.render('admin_html/admin_home.ejs', {admin_key: req.session.keyAdmin})
 }
@@ -90,6 +98,8 @@ exports.adminlogin = async (req, res) => {
 }
 
 
+
+
 exports.create_account = async (req, res) => {
     try {
         var obj = new admin_account(req.body)
@@ -112,6 +122,10 @@ exports.create_account = async (req, res) => {
 }
 
 
+
+
+
+
 exports.listAdmin = async (req, res) => {
     await admin_account.find({status: 1}, function (err, data) {
         if (err) {
@@ -120,6 +134,18 @@ exports.listAdmin = async (req, res) => {
         res.render('admin_html/list_admin.ejs', {data: data, admin_key: req.session.keyAdmin})
     })
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 exports.get_all_course = (req, res) => {
@@ -176,4 +202,10 @@ exports.list_registraction = async (req,res)=>{
     registraction.find((err,data)=>{
         res.render('admin_html/list_registraction.ejs', {data: data, admin_key: req.session.keyAdmin})
     })
+}
+
+
+exports.new_admin = async (req,res)=>{
+    res.render('newAdmin.ejs',{admin_key: req.session.keyAdmin})
+
 }

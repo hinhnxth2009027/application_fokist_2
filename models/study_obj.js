@@ -15,6 +15,9 @@ const schema = mongoose.Schema({
         type: String,
         trim: true
     },
+    video:{
+      type:String
+    },
     add_ress: {
         require: true,
         type: String,

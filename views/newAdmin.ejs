@@ -2,17 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+
+        * {
+            font-family: sans-serif;
+        }
+
+        .container h1 {
+           margin-bottom: 40px;
+        }
+
+        input:focus,button:focus{
+            outline: none;
+        }
+
+        .container {
+            width: 450px;
+            border: #007bff solid 2px;
+            height: 550px;
+            padding: 20px;
+            margin: 100px auto;
+            border-radius: 25px;
+        }
+
+
+        .container form button:hover {
+            background: #00ff80;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .container form button {
+            height: 35px ;
+            width: 120px;
+            background: white;
+            color: red;
+            border-radius: 8px;
+            border: #007bff 2px solid;
+            transition: 0.3s;
+        }
+        .container form input {
+            width: 80%;
+            height: 35px;
+            border-radius: 8px;
+            padding-left: 10px;
+            display: block;
+            margin: auto;
+            border: #007bff 2px solid;
+        }
+        .error {
+            color: red;
+            display:block;
+            font-size: 14px;
+            margin-left: 10%;
+        }
+        .container div {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<form action="/admin/new_admin" method="post">
-    <input type="text" placeholder="email or phone number" name="admin_email">
-    <input type="password" placeholder="password" name="password">
-    <input type="text" placeholder="admin name" name="admin_name">
-    <button>register</button>
-</form>
+<div class="container">
+    <h1>Create new administrator</h1>
+    <form action="/admin/new_admin" id="new_admin" method="post">
+        <input type="text" placeholder="email or phone number" name="admin_email"><br><br>
+        <input type="password" placeholder="password" name="password"><br><br>
+        <input type="text" placeholder="admin name" name="admin_name"><br><br>
+        <input type="hidden" placeholder="admin name" name="create_by" value="<%=admin_key.admin_name%>">
+        <div>
+            <button>register</button>
+            <a href="/admin">
+                <button type="button">back</button>
+            </a>
+        </div>
+    </form>
+</div>
+
+<script src="/plugins/jquery/jquery.js"></script>
+<script src="/plugins/jquery-validation/jquery.validate.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function (){
+        $('#new_admin').validate({
+            rules:{
+                admin_email:{
+                    email:true,
+                    required:true
+                },
+                password:{
+                    minlength:6,
+                    required:true
+                },
+                admin_name:{
+                    minlength: 5,
+                    required:true
+                }
+            },
+            messages:{
+                admin_email:{
+                    email:'Incorrect email format',
+                    required:'The email field cannot be left blank'
+                },
+                password:{
+                    minlength:'Password is required to ensure security',
+                    required:'Enter your new password to continue'
+                },
+                admin_name:{
+                    minlength: 'Admin name should be complete and detailed',
+                    required:'Enter the admin name to continue'
+                },
+            }
+        })
+    })
+</script>
 </body>
 </html>

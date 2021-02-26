@@ -1,6 +1,7 @@
 var express = require('express')
 var admin_controller = require('../controller/admin_controller')
 var study_controller = require('../controller/study_controller')
+var contact_controller = require('../controller/feedback_controller')
 var router = express.Router()
 
 
@@ -21,9 +22,7 @@ router.post('/new_study',study_controller.new_study)
 
 
 
-router.get('/newAdmin',(req,res)=>{
-    res.render('newAdmin.ejs')
-})
+router.get('/newAdmin',admin_controller.new_admin)
 
 
 router.get('/all-course',admin_controller.get_all_course)
@@ -40,6 +39,7 @@ router.get ('/add-a-new-course',admin_controller.add_a_new_course)
 
 
 router.post ('/add-a-new-course',admin_controller.post_a_new_course)
+router.get ('/list_contact',contact_controller.list_all)
 
 
 

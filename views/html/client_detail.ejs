@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="../Style/index.css">
 
     <title>Kisds zone packages</title>
-    <style>
+    <style >
         .container_img_index {
             width: 80%;
             display: flex;
@@ -124,7 +125,6 @@
 
         @media only screen and (min-width: 900px) {
             .form_registraction {
-                border: red 1px solid;
                 width: 40%;
             }
 
@@ -143,14 +143,12 @@
 
         @media only screen and (max-width: 899px) {
             .form_registraction {
-                border: red 1px solid;
                 width: 60%;
             }
 
             .form_registraction .input1 {
                 width: 90%;
             }
-
             .form_registraction .input2 {
                 width: 45%;
             }
@@ -162,7 +160,7 @@
 
         @media only screen and (max-width: 499px) {
             .form_registraction {
-                border: red 1px solid;
+                border:none;
                 width: 100%;
             }
 
@@ -185,32 +183,33 @@
             font-size: 14px;
         }
 
+        div iframe {
+            width: 60%;
+            height: 550px;
+            display: block;
+            border: #ff0000 2px solid;
+            border-radius: 10px;
+            margin: auto;
+        }
 
     </style>
 </head>
 <body>
 
-
-
-
 <div class="header col-12 row">
-    <a href="/">
-        <div class="logo col-6 col-s-6">
+    <div class="logo col-6 col-s-6">
+        <a href="/">
             <h1 class="row"><span class="text_color_red">K</span><span class="text_color_green">I</span><span
                         class="text_color_blue">D</span><span class="text_color_orange">S</span><label>- zone</label></h1>
-            <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
-        </div>
-    </a>
+        </a>
+        <i class="fa fa-bars navbar-icon" aria-hidden="true"></i>
+    </div>
     <!--    menutop    -->
     <%- include('include/menu.ejs') %>
 </div>
 
-
-
-
-
 <hr class="bam">
-<div class="col-6 col-s-12" style="margin-top: 50px">
+<div class="col-8 col-s-12" style="margin-top: 50px">
     <div class="contaimer_show_img" style="overflow: hidden">
         <div>
             <img src="<%= data1.thumbnail %>" id="img_show">
@@ -224,7 +223,8 @@
         <% } %>
     </div>
 </div>
-<div class="col-6 col-s-12 detail_text">
+
+<div class="col-4 col-s-12 detail_text">
     <h1 style="font-size: 40px" class="text_color_orange"><%= data1.title %></h1>
     <h2>Address : <span style="color: #858484"><%= data1.add_ress %></span></h2>
     <h2>Time: <span style="color: #858484"><%= data1.time %></span></h2>
@@ -235,41 +235,28 @@
         <img src="<%= data2.avatar %>" width="100%">
     </div>
     <h2>Teacher exp : <span style="color: #858484">over <%= data2.exp %> years</span></h2>
-    <h2>Subject : <span style="color: #858484"><%= data2.subject %></span></h2>
     <h1>Price : <span style="color: red">$ <%= data1.price %> / month</span></h1>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<hr style="width: 90%;height: 5px ; background: #7bde79;margin:30px auto;border: none">
+<% if (data1.video === undefined){%>
+    <h1 align="center" style="color: #f37373">admin is still updating the video on course details please come back after a while</h1>
+<% } else {%>
+<div>
+    <%-data1.video%>
+</div>
+<% } %>
+<hr style="width: 70%;height: 5px ; background: #80b2ee;margin:30px auto;border: none">
 
 
 <div class="col-12 col-s-12 registraction">
     <form action="/registraction" id="registraction" method="post" class="form_registraction">
-        <h1>Registraction form</h1><br>
+        <h1>Registraction</h1><br>
         <input class="input1" type="text" name="Email" placeholder="Email"><br><br>
         <input class="input3" type="text" name="parent_name" placeholder="Parent's name"><br><br>
-        <input class="input3" type="text" name="child_name" placeholder="child's name"><br><br>
+        <input class="input3" type="text" name="child_name" placeholder="Child's name"><br><br>
         <input class="input2" type="text" name="phone_number" placeholder="Phone numder">
-        <lable>child's gender</lable>
         <select class="input2" name="child_gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -277,7 +264,7 @@
 
         <input type="hidden" name="course_id" value="<%= data1._id %>">
         <input type="hidden" name="course_title" value="<%= data1.title %>">
-        <button>Registration</button>
+        <button>Submit</button>
     </form>
 </div>
 

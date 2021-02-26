@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create Event</title>
+    <title>List recouse | Kids zone</title>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
@@ -91,7 +92,7 @@
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=data[i].number%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #5f80fc"><%=data[i].number_text%></h2></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=data[i].audio_number%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls=""><source src="<%=data[i].audio_number%>"></audio></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=data[i]._id%>">
                                                 <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=data[i]._id%>" class="<%=data[i]._id%>">
                                                 <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=data[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
@@ -127,7 +128,7 @@
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=letters[i].text_letters%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><div style="display: flex;justify-content: center;align-items: center;overflow: hidden;width: 200px;height: 150px"><img src="<%=letters[i].photo_letter%>" width="100%"></div></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=letters[i].audio_letter%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" ><source src="<%=letters[i].audio_letter%>"></audio></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=letters[i]._id%>">
                                                 <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=letters[i]._id%>" class="<%=letters[i]._id%>">
                                                 <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=letters[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
@@ -168,7 +169,7 @@
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=animals[i].animal_name%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><div style="display: flex;justify-content: center;align-items: center;overflow: hidden;width: 200px;height: 150px"><img src="<%=animals[i].animal_photo%>" width="100%"></div></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=animals[i].animal_audio%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls=""><source src="<%=animals[i].animal_audio%>"></audio></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=animals[i]._id%>">
                                                 <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=animals[i]._id%>" class="<%=animals[i]._id%>">
                                                 <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=animals[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
@@ -214,7 +215,7 @@
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=vegetable[i].vegetable_name%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><div style="display: flex;justify-content: center;align-items: center;overflow: hidden;width: 200px;height: 150px"><img src="<%=vegetable[i].photo_vegetable%>" width="100%"></div></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=vegetable[i].audio_vegetable%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls=""><source src="<%=vegetable[i].audio_vegetable%>"></audio></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=vegetable[i]._id%>">
                                                 <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=vegetable[i]._id%>" class="<%=vegetable[i]._id%>">
                                                 <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=vegetable[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">
@@ -260,7 +261,7 @@
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=i+1%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff7474"><%=color[i].color_name%></h2></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><div style="width: 100px;height: 100px;background: <%=color[i].color_code%>;margin: auto;border: black 1px solid"></div></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls="" autoplay=""><source src="<%=color[i].audio_color%>"></audio></td>
+                                        <td style="text-align: center;height: 80px;overflow: hidden"><audio controls=""><source src="<%=color[i].audio_color%>"></audio></td>
                                         <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=color[i]._id%>">
                                                 <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=color[i]._id%>" class="<%=color[i]._id%>">
                                                 <button class="btn btn-outline-primary">Edit</button></a>&nbsp;&nbsp;<a href="/admin/delete_event/<%=color[i]._id%>" onclick="return confirm('Bạn có chắc muốn xoá bài viết này không?')">

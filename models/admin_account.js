@@ -18,6 +18,10 @@ var schema = new mongoose.Schema({
     admin_avatar: {
         type: String,
     },
+    create_by:{
+        type:String
+    }
+    ,
     status: {
         type: Number,
     },

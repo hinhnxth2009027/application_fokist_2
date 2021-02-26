@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create Event</title>
+    <title>List admin | Kids zone </title>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
@@ -57,7 +58,7 @@
                                         <tr>
                                             <th style="text-align: center;width: 20%">admin email</th>
                                             <th style="text-align: center;width: 20%">admin name</th>
-                                            <th style="text-align: center;width: 30%">admin id</th>
+                                            <th style="text-align: center;width: 30%">Create by</th>
                                             <th style="text-align: center;width: 30%">R  D</th>
                                         </tr>
                                         </thead>
@@ -66,7 +67,13 @@
                                         <tr>
                                             <td style="text-align: center;overflow: hidden"><h1 style="font-size: 20px" class="text-danger"><%=data[i].admin_email%></h1></td>
                                             <td style="text-align: center;overflow: hidden;"><h1 style="font-size: 20px"><%=data[i].admin_name%></h1></td>
-                                            <td style="text-align: center;overflow: hidden;"><h2 style="font-size: 20px"><%=data[i]._id%></h2></td>
+                                            <td style="text-align: center;overflow: hidden;"><h2 style="font-size: 20px">
+                                                    <% if (data[i].create_by === undefined){%>
+                                                        This is the default admin
+                                                    <% }else {%>
+                                                        <%=data[i].create_by%>
+                                                        <% } %>
+                                                </h2></td>
                                             <td style="text-align: center;overflow: hidden;"><a href="/admin/show/<%=data[i]._id%>">
                                                     <button class="btn btn-outline-primary">detail</button></a><a href="/admin/delete_event/<%=data[i]._id%>" onclick="return confirm('bạn có chắc muốn xóa người dùng này không?')">
                                                     <button class=" btn btn-outline-danger">delete</button></a></td></td>

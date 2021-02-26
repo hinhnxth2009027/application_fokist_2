@@ -289,7 +289,7 @@ exports.listUer = async (req, res) => {
         filter['gender'] = gender
     }
     if (username && username.length > 0) {
-        filter['user_email'] = {$regex: '.*' + username + '.*'}
+        filter['user_name'] = {$regex: '.*' + username + '.*'}
     }
 
 
@@ -345,6 +345,7 @@ exports.detail = async (req, res) => {
                 a[i] += result[i]
             }
             res.render('html/client_detail.ejs', {data1: data1, data2: data2, photo: a, user: req.session.user})
+            console.log(data1)
         })
     })
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="https://cdn2.vectorstock.com/i/1000x1000/65/76/kids-zone-colorful-banner-cartoon-letters-and-vector-18026576.jpg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>List course | kids zone</title>
+    <title>Registered | Kids zone</title>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/plugins/Create_event.css">
 </head>
 <body class="hold-transition sidebar-mini">
+
 
 <div class="wrapper">
     <!-- Navbar -->
@@ -37,8 +38,10 @@
     <!-- /.navbar -->
     <!-- Main Sidebar Container -->
     <%- include('include/side_bar.ejs') %>
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+
         <!-- Content Header (Page header) -->
         <!-- Main content -->
         <section class="content ">
@@ -47,32 +50,32 @@
                     <div class="col-12 ">
                         <div class="card ">
                             <div class="card-header ">
-                                <h3 class="card-title">recent events</h3>
+                                <h3 class="card-title">all user</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example2" class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <th style="text-align: center;width: 20px">STT</th>
-                                        <th style="text-align: center;width: 20%">Title</th>
-                                        <th style="text-align: center;width: 20%">description</th>
-                                        <th style="text-align: center;width: 30%">create at</th>
-                                        <th style="text-align: center;width: 30%">R  D</th>
+                                        <th style="text-align: center;width: 20px">Stt</th>
+                                        <th style="text-align: center;width: 25%">Email</th>
+                                        <th style="text-align: center;width: 15%">Contact name</th>
+                                        <th style="text-align: center;width: 45%">Comment</th>
+                                        <th style="text-align: center;width: 15%">R D</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <% for (var i = 0; i < data.length; i++){ %>
+                                    <% for (var i = data.length-1; i >= 0; i--){ %>
                                     <tr>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #ff9696"><%=i+1%></h2></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="color: #000000"><%=data[i].Title%>"</h2></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><h1 style="font-size: 20px" class="text-danger"><%-data[i].description%></h1></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><h2 style="font-size: 20px"><%=data[i].created_at%></h2></td>
-                                        <td style="text-align: center;height: 80px;overflow: hidden"><a href="/admin/show/<%=data[i]._id%>">
-                                                <button class="btn btn-outline-success">Detail</button></a>&nbsp;&nbsp;<a href="/admin/edit/<%=data[i]._id%>" class="<%=data[i]._id%>">
-                                                <button class="btn btn-outline-primary">Edit</button></a></td>
+                                        <td style="text-align: center;overflow: hidden"><h1 style="font-size: 20px" class="text-danger"><%=i+1%></h1></td>
+                                        <td style="text-align: center;overflow: hidden"><h1 style="font-size: 20px" class="text-danger"><%=data[i].email%></h1></td>
+                                        <td style="text-align: center;overflow: hidden"><h1 style="font-size: 20px" class="text-danger"><%=data[i].user_name_contact%></h1></td>
+                                        <td style="text-align: center;overflow: hidden"><h1 style="font-size: 20px"><%=data[i].content_feedback%></h1></td>
+                                        <td style="text-align: center;overflow: hidden;"><a href="/admin/show/<%=data[i]._id%>">
+                                                <button class="btn btn-outline-primary">detail</button></a><a href="/admin/delete_event/<%=data[i]._id%>" onclick="return confirm('bạn có chắc muốn xóa người dùng này không?')">
+                                                <button class=" btn btn-outline-danger">delete</button></a></td></td>
                                     </tr>
-                                    <%} %>
+                                    <% } %>
                                     </tbody>
                                 </table>
                             </div>
@@ -128,22 +131,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
-<script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
-    });
-</script>
+<script src="/Script/admin/search_by_name.js"></script>
+
+
 </body>
 </html>

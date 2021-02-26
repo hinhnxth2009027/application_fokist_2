@@ -10,17 +10,24 @@
         <!-- Sidebar user panel (optional) -->
         <!-- Sidebar Menu -->
         <nav class="mt-2">
+
+
+
+
+
+
+
+
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                     with font-awesome or any other icon font library -->
+
 
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
-                            create new
+                            Event manage
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -28,15 +35,89 @@
                         <li class="nav-item">
                             <a href="/admin/create_form_event" class="nav-link">
                                 <i class="fas fa-calendar-alt"></i>
-                                <p>New event</p>
+                                <p>Create new event</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/create_form_event" class="nav-link">
+                            <a href="/admin/show_event" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>List event</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <br>
+
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <p>
+                            User management
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/listUer" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>List user</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/get_list_registraction" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>List registraction user</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin/list_contact" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>List Contact</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <br>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users-cog"></i>
+                        <p>
+                            Management team
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/listAdmin" class="nav-link">
+                                <i class="fas fa-table"></i>
+                                <p>List Admin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/newAdmin" class="nav-link">
                                 <i class="fas fa-user-lock"></i>
                                 <p>New Admin</p>
                             </a>
                         </li>
+                    </ul>
+                </li>
+                <br>
+
+
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>
+                            Course management
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/admin/new_teacher" class="nav-link">
                                 <i class="fas fa-chalkboard-teacher"></i>
@@ -46,7 +127,7 @@
                         <li class="nav-item">
                             <a href="/admin/new_study" class="nav-link">
                                 <i class="fas fa-university"></i>
-                                <p>New packages</p>
+                                <p>New course offline</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -61,62 +142,34 @@
                                 <p>New record in course</p>
                             </a>
                         </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Manage
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/admin/show_event" class="nav-link">
-                                <i class="fas fa-table"></i>
-                                <p>List event</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/listUer" class="nav-link">
-                                <i class="fas fa-table"></i>
-                                <p>list user</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/listAdmin" class="nav-link">
-                                <i class="fas fa-table"></i>
-                                <p>list Admin</p>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="/admin/get_list_course" class="nav-link">
                                 <i class="fas fa-table"></i>
-                                <p>list course in website</p>
+                                <p>List course in website</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/admin/get_list_course_offline" class="nav-link">
                                 <i class="fas fa-table"></i>
-                                <p>list course offline</p>
+                                <p>List course offline</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/admin/get_list_record_course" class="nav-link">
                                 <i class="fas fa-table"></i>
-                                <p>record for course in website</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/get_list_registraction" class="nav-link">
-                                <i class="fas fa-table"></i>
-                                <p>list registraction user</p>
+                                <p>Record for course in website</p>
                             </a>
                         </li>
                     </ul>
                 </li>
             </ul>
+
+
+
+
+
+
+
         </nav>
         <!-- /.sidebar-menu -->
     </div>
